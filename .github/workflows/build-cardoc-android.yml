@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,24 +21,23 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Install Android SDK packages
-        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+        run: |
+          yes | sdkmanager --licenses > /dev/null || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
 
-      - name: Unpack CarDoc native source
+      - name: Unpack CarDoc source
         run: |
           rm -rf android-native
           mkdir android-native
           unzip -q cardoc-android-native-source.zip -d android-native
 
-      - name: Build debug APK
+      - name: Build APK
         working-directory: android-native
         run: gradle assembleDebug --stacktrace
 
