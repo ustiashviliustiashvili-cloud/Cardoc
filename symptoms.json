@@ -1,0 +1,929 @@
+{
+  "meta": {
+    "name": "CarDoc Symptom Diagnosis",
+    "version": "1.0",
+    "languages": [
+      "en",
+      "ka",
+      "ru"
+    ],
+    "symptom_count": 13,
+    "note": "Rule-based symptom helper. Results are possible causes, not a definitive diagnosis."
+  },
+  "symptoms": {
+    "rough_idle": {
+      "severity": "medium",
+      "en": {
+        "label": "Engine shakes / rough idle",
+        "keywords": [
+          "engine shakes",
+          "rough idle",
+          "vibration at idle",
+          "idle vibration",
+          "shaking engine",
+          "uneven idle"
+        ],
+        "causes": [
+          "Ignition misfire (spark plug or ignition coil)",
+          "Vacuum or intake air leak",
+          "Dirty throttle body",
+          "Fuel injector problem",
+          "Low compression"
+        ],
+        "checks": [
+          "Scan for P0300–P0312 codes",
+          "Inspect spark plugs and coils",
+          "Check intake/vacuum hoses",
+          "Check fuel trims and MAF data"
+        ]
+      },
+      "ka": {
+        "label": "ძრავი კანკალებს / არათანაბარი უქმი სვლა",
+        "keywords": [
+          "ძრავი კანკალებს",
+          "კანკალებს",
+          "არათანაბარი აბაროტი",
+          "აბაროტს ათამაშებს",
+          "უქმზე კანკალი",
+          "ძრავი ვიბრირებს",
+          "ვიბრაცია უქმზე"
+        ],
+        "causes": [
+          "ანთების გამოტოვება — სანთელი ან კოჭა",
+          "ვაკუუმის/შემშვები ჰაერის გაჟონვა",
+          "დაბინძურებული დროსელი",
+          "ინჟექტორის პრობლემა",
+          "დაბალი კომპრესია"
+        ],
+        "checks": [
+          "შეამოწმეთ P0300–P0312 კოდები",
+          "შეამოწმეთ სანთლები და კოჭები",
+          "შეამოწმეთ ვაკუუმის მილები",
+          "ნახეთ fuel trim და MAF მონაცემები"
+        ]
+      },
+      "ru": {
+        "label": "Двигатель трясёт / неровный холостой ход",
+        "keywords": [
+          "двигатель трясет",
+          "двигатель трясёт",
+          "неровный холостой",
+          "плавают обороты",
+          "вибрация на холостом",
+          "троит"
+        ],
+        "causes": [
+          "Пропуски зажигания — свеча или катушка",
+          "Подсос воздуха",
+          "Грязная дроссельная заслонка",
+          "Проблема форсунки",
+          "Низкая компрессия"
+        ],
+        "checks": [
+          "Проверьте коды P0300–P0312",
+          "Проверьте свечи и катушки",
+          "Проверьте вакуумные шланги",
+          "Посмотрите fuel trim и данные MAF"
+        ]
+      }
+    },
+    "no_start": {
+      "severity": "high",
+      "en": {
+        "label": "Engine will not start",
+        "keywords": [
+          "will not start",
+          "won't start",
+          "no start",
+          "does not start",
+          "cranks but won't start",
+          "engine not starting"
+        ],
+        "causes": [
+          "Weak battery or poor battery connection",
+          "No fuel pressure",
+          "Crankshaft position sensor fault",
+          "Ignition system fault",
+          "Immobilizer/key recognition issue"
+        ],
+        "checks": [
+          "Check battery voltage and terminals",
+          "Listen for fuel pump",
+          "Scan for crank/cam sensor codes",
+          "Check for spark and fuel pressure"
+        ]
+      },
+      "ka": {
+        "label": "მანქანა არ იქოქება",
+        "keywords": [
+          "არ იქოქება",
+          "მანქანა არ იქოქება",
+          "სტარტერი ატრიალებს მაგრამ არ იქოქება",
+          "ვერ ვქოქავ",
+          "დაქოქვა არ უნდა"
+        ],
+        "causes": [
+          "სუსტი აკუმულატორი ან ცუდი კონტაქტი",
+          "საწვავის წნევა არ არის",
+          "კრანკშაფტის სენსორის პრობლემა",
+          "ანთების სისტემის პრობლემა",
+          "იმობილაიზერის/გასაღების ამოცნობის პრობლემა"
+        ],
+        "checks": [
+          "შეამოწმეთ აკუმულატორის ძაბვა და კლემები",
+          "მოუსმინეთ საწვავის ტუმბოს",
+          "შეამოწმეთ crank/cam სენსორის კოდები",
+          "შეამოწმეთ ნაპერწკალი და საწვავის წნევა"
+        ]
+      },
+      "ru": {
+        "label": "Автомобиль не заводится",
+        "keywords": [
+          "не заводится",
+          "не запускается",
+          "стартер крутит но не заводится",
+          "не могу завести",
+          "двигатель не запускается"
+        ],
+        "causes": [
+          "Слабый аккумулятор или плохой контакт",
+          "Нет давления топлива",
+          "Датчик коленвала",
+          "Неисправность системы зажигания",
+          "Иммобилайзер/ключ"
+        ],
+        "checks": [
+          "Проверьте напряжение АКБ и клеммы",
+          "Послушайте топливный насос",
+          "Проверьте коды датчиков коленвала/распредвала",
+          "Проверьте искру и давление топлива"
+        ]
+      }
+    },
+    "stalling": {
+      "severity": "high",
+      "en": {
+        "label": "Engine stalls / shuts off",
+        "keywords": [
+          "engine stalls",
+          "stalls",
+          "shuts off",
+          "dies while driving",
+          "cuts out",
+          "engine dies"
+        ],
+        "causes": [
+          "Crankshaft/camshaft sensor fault",
+          "Fuel supply problem",
+          "Dirty throttle body or idle control issue",
+          "Electrical power/ground fault",
+          "Major vacuum leak"
+        ],
+        "checks": [
+          "Scan for stored codes",
+          "Check fuel pressure",
+          "Check charging voltage",
+          "Inspect crank/cam sensor signals"
+        ]
+      },
+      "ka": {
+        "label": "ძრავი ქრება / ითიშება",
+        "keywords": [
+          "ძრავი ქრება",
+          "ქრება მოძრაობაში",
+          "ითიშება",
+          "მოძრაობისას ითიშება",
+          "ძრავი ჩერდება"
+        ],
+        "causes": [
+          "კრანკშაფტის/კამშაფტის სენსორის პრობლემა",
+          "საწვავის მიწოდების პრობლემა",
+          "დროსელის ან უქმი სვლის მართვის პრობლემა",
+          "ელექტრო კვების/მასის პრობლემა",
+          "დიდი ვაკუუმის გაჟონვა"
+        ],
+        "checks": [
+          "წაიკითხეთ შენახული კოდები",
+          "შეამოწმეთ საწვავის წნევა",
+          "შეამოწმეთ გენერატორის ძაბვა",
+          "შეამოწმეთ crank/cam სენსორების სიგნალები"
+        ]
+      },
+      "ru": {
+        "label": "Двигатель глохнет",
+        "keywords": [
+          "двигатель глохнет",
+          "глохнет",
+          "глохнет на ходу",
+          "выключается на ходу",
+          "мотор глохнет"
+        ],
+        "causes": [
+          "Датчик коленвала/распредвала",
+          "Проблема подачи топлива",
+          "Дроссель/холостой ход",
+          "Питание или масса",
+          "Сильный подсос воздуха"
+        ],
+        "checks": [
+          "Считайте сохранённые коды",
+          "Проверьте давление топлива",
+          "Проверьте напряжение генератора",
+          "Проверьте сигналы датчиков коленвала/распредвала"
+        ]
+      }
+    },
+    "loss_power": {
+      "severity": "medium",
+      "en": {
+        "label": "Loss of power / poor acceleration",
+        "keywords": [
+          "loss of power",
+          "no power",
+          "poor acceleration",
+          "slow acceleration",
+          "won't accelerate",
+          "reduced power"
+        ],
+        "causes": [
+          "MAF/MAP sensor problem",
+          "Fuel pressure or injector issue",
+          "Clogged catalytic converter",
+          "Turbo/boost leak on turbo engines",
+          "Ignition misfire"
+        ],
+        "checks": [
+          "Check MAF/MAP live data",
+          "Check fuel pressure",
+          "Scan for P0299/P0234 on turbo engines",
+          "Inspect exhaust restriction and misfire codes"
+        ]
+      },
+      "ka": {
+        "label": "ძალა დაკარგა / ცუდად აჩქარებს",
+        "keywords": [
+          "ძალა დაკარგა",
+          "ძალა არ აქვს",
+          "ვერ აჩქარებს",
+          "ცუდად აჩქარებს",
+          "გაწევა არ აქვს",
+          "მოხუთულია"
+        ],
+        "causes": [
+          "MAF/MAP სენსორის პრობლემა",
+          "საწვავის წნევის ან ინჟექტორის პრობლემა",
+          "დახშული კატალიზატორი",
+          "ტურბოს/ბუსტის გაჟონვა ტურბო ძრავზე",
+          "ანთების გამოტოვება"
+        ],
+        "checks": [
+          "ნახეთ MAF/MAP live data",
+          "შეამოწმეთ საწვავის წნევა",
+          "ტურბო ძრავზე ნახეთ P0299/P0234",
+          "შეამოწმეთ კატალიზატორი და misfire კოდები"
+        ]
+      },
+      "ru": {
+        "label": "Потеря мощности / плохо разгоняется",
+        "keywords": [
+          "потеря мощности",
+          "нет мощности",
+          "плохо разгоняется",
+          "не едет",
+          "нет тяги",
+          "слабый разгон"
+        ],
+        "causes": [
+          "Проблема MAF/MAP",
+          "Давление топлива или форсунки",
+          "Забитый катализатор",
+          "Утечка наддува на турбомоторе",
+          "Пропуски зажигания"
+        ],
+        "checks": [
+          "Посмотрите live data MAF/MAP",
+          "Проверьте давление топлива",
+          "Для турбо проверьте P0299/P0234",
+          "Проверьте катализатор и коды пропусков"
+        ]
+      }
+    },
+    "overheat": {
+      "severity": "critical",
+      "en": {
+        "label": "Engine overheating",
+        "keywords": [
+          "overheating",
+          "engine hot",
+          "temperature high",
+          "temp gauge high",
+          "boiling coolant"
+        ],
+        "causes": [
+          "Low coolant or coolant leak",
+          "Cooling fan not working",
+          "Thermostat stuck closed",
+          "Water pump problem",
+          "Blocked radiator"
+        ],
+        "checks": [
+          "Stop driving if temperature is in the red",
+          "Let the engine cool before opening the cooling system",
+          "Check coolant level only when safe/cool",
+          "Inspect fan operation and leaks"
+        ]
+      },
+      "ka": {
+        "label": "ძრავი ცხელდება / გადახურება",
+        "keywords": [
+          "ძრავი ცხელდება",
+          "გადახურება",
+          "ტემპერატურა მაღალია",
+          "წყალს ადუღებს",
+          "ანტიფრიზს ადუღებს",
+          "ტემპერატურის ისარი მაღლაა"
+        ],
+        "causes": [
+          "ანტიფრიზის დაბალი დონე ან გაჟონვა",
+          "ვენტილატორი არ მუშაობს",
+          "თერმოსტატი ჩაკეტილია",
+          "წყლის ტუმბოს პრობლემა",
+          "რადიატორი დახშულია"
+        ],
+        "checks": [
+          "თუ ტემპერატურა წითელ ზონაშია, გააჩერეთ მანქანა",
+          "გაგრილების სისტემის გახსნამდე ძრავს აცადეთ გაგრილება",
+          "ანტიფრიზის დონე მხოლოდ გაგრილებულ ძრავზე შეამოწმეთ",
+          "შეამოწმეთ ვენტილატორი და გაჟონვები"
+        ]
+      },
+      "ru": {
+        "label": "Двигатель перегревается",
+        "keywords": [
+          "перегревается",
+          "двигатель горячий",
+          "высокая температура",
+          "кипит антифриз",
+          "стрелка температуры высокая"
+        ],
+        "causes": [
+          "Низкий уровень ОЖ или утечка",
+          "Не работает вентилятор",
+          "Термостат заклинил",
+          "Неисправность помпы",
+          "Забит радиатор"
+        ],
+        "checks": [
+          "Если температура в красной зоне — остановите автомобиль",
+          "Дайте двигателю остыть перед открытием системы охлаждения",
+          "Проверяйте ОЖ только на остывшем двигателе",
+          "Проверьте вентилятор и утечки"
+        ]
+      }
+    },
+    "fuel_consumption": {
+      "severity": "low",
+      "en": {
+        "label": "High fuel consumption",
+        "keywords": [
+          "high fuel consumption",
+          "uses too much fuel",
+          "bad mpg",
+          "fuel economy worse",
+          "high consumption"
+        ],
+        "causes": [
+          "Oxygen sensor or MAF issue",
+          "Thermostat stuck open",
+          "Rich fuel mixture",
+          "Low tire pressure or dragging brakes",
+          "Injector leakage"
+        ],
+        "checks": [
+          "Check fuel trims and O2 sensor data",
+          "Check coolant temperature reaches normal",
+          "Inspect tire pressures",
+          "Look for rich mixture codes such as P0172/P0175"
+        ]
+      },
+      "ka": {
+        "label": "საწვავს ბევრს წვავს",
+        "keywords": [
+          "ბევრს წვავს",
+          "საწვავის ხარჯი გაიზარდა",
+          "ბენზინს ბევრს წვავს",
+          "დიზელს ბევრს წვავს",
+          "ხარჯი მაღალია"
+        ],
+        "causes": [
+          "O2 ან MAF სენსორის პრობლემა",
+          "თერმოსტატი ღია მდგომარეობაშია გაჭედილი",
+          "მდიდარი საწვავის ნარევი",
+          "საბურავების დაბალი წნევა ან მუხრუჭის დაჭერა",
+          "ინჟექტორის გაჟონვა"
+        ],
+        "checks": [
+          "ნახეთ fuel trims და O2 მონაცემები",
+          "შეამოწმეთ coolant temperature ნორმამდე ადის თუ არა",
+          "შეამოწმეთ საბურავების წნევა",
+          "ნახეთ P0172/P0175 ტიპის კოდები"
+        ]
+      },
+      "ru": {
+        "label": "Высокий расход топлива",
+        "keywords": [
+          "большой расход",
+          "высокий расход топлива",
+          "много бензина",
+          "много топлива",
+          "расход вырос"
+        ],
+        "causes": [
+          "Датчик O2 или MAF",
+          "Термостат заклинил открытым",
+          "Богатая смесь",
+          "Низкое давление шин или подклинивание тормозов",
+          "Подтекающая форсунка"
+        ],
+        "checks": [
+          "Посмотрите fuel trims и данные O2",
+          "Проверьте рабочую температуру двигателя",
+          "Проверьте давление в шинах",
+          "Ищите коды P0172/P0175"
+        ]
+      }
+    },
+    "hard_start_cold": {
+      "severity": "medium",
+      "en": {
+        "label": "Hard to start when cold",
+        "keywords": [
+          "hard start cold",
+          "cold start problem",
+          "hard to start in morning",
+          "starts badly when cold"
+        ],
+        "causes": [
+          "Weak battery",
+          "Coolant temperature sensor issue",
+          "Fuel pressure bleeding down",
+          "Dirty injectors",
+          "Glow plug issue on diesel"
+        ],
+        "checks": [
+          "Check battery voltage during cranking",
+          "Compare coolant temperature reading to ambient temperature",
+          "Check fuel pressure retention",
+          "On diesel, test glow plugs"
+        ]
+      },
+      "ka": {
+        "label": "ცივზე ძნელად იქოქება",
+        "keywords": [
+          "ცივზე ძნელად იქოქება",
+          "დილით ძნელად იქოქება",
+          "ცივზე ცუდად იქოქება",
+          "ცივ ძრავზე დაქოქვა უჭირს"
+        ],
+        "causes": [
+          "სუსტი აკუმულატორი",
+          "გამაგრილებლის ტემპერატურის სენსორის პრობლემა",
+          "საწვავის წნევა იკარგება",
+          "დაბინძურებული ინჟექტორები",
+          "დიზელზე ნათების სანთლების პრობლემა"
+        ],
+        "checks": [
+          "დაქოქვისას შეამოწმეთ აკუმულატორის ძაბვა",
+          "coolant temperature შეადარეთ გარემოს ტემპერატურას",
+          "შეამოწმეთ საწვავის წნევის შენარჩუნება",
+          "დიზელზე შეამოწმეთ ნათების სანთლები"
+        ]
+      },
+      "ru": {
+        "label": "Плохо заводится на холодную",
+        "keywords": [
+          "плохо заводится на холодную",
+          "трудный холодный запуск",
+          "утром плохо заводится",
+          "на холодную долго крутит"
+        ],
+        "causes": [
+          "Слабый аккумулятор",
+          "Датчик температуры ОЖ",
+          "Падает давление топлива",
+          "Грязные форсунки",
+          "Свечи накала на дизеле"
+        ],
+        "checks": [
+          "Проверьте напряжение АКБ при запуске",
+          "Сравните температуру ОЖ с окружающей",
+          "Проверьте удержание давления топлива",
+          "На дизеле проверьте свечи накала"
+        ]
+      }
+    },
+    "smoke_black": {
+      "severity": "medium",
+      "en": {
+        "label": "Black exhaust smoke",
+        "keywords": [
+          "black smoke",
+          "black exhaust",
+          "smokes black"
+        ],
+        "causes": [
+          "Rich fuel mixture",
+          "MAF/MAP sensor issue",
+          "Leaking injector",
+          "Restricted air filter",
+          "Turbo/boost problem on diesel"
+        ],
+        "checks": [
+          "Check air filter",
+          "Check fuel trims and MAF/MAP",
+          "Inspect injectors",
+          "Scan for boost and mixture codes"
+        ]
+      },
+      "ka": {
+        "label": "შავი კვამლი",
+        "keywords": [
+          "შავი კვამლი",
+          "შავად ბოლავს",
+          "შავი ბოლი"
+        ],
+        "causes": [
+          "მდიდარი საწვავის ნარევი",
+          "MAF/MAP სენსორის პრობლემა",
+          "ინჟექტორის გაჟონვა",
+          "დახშული ჰაერის ფილტრი",
+          "დიზელზე ტურბოს/ბუსტის პრობლემა"
+        ],
+        "checks": [
+          "შეამოწმეთ ჰაერის ფილტრი",
+          "ნახეთ fuel trims და MAF/MAP",
+          "შეამოწმეთ ინჟექტორები",
+          "წაიკითხეთ boost/mixture კოდები"
+        ]
+      },
+      "ru": {
+        "label": "Чёрный дым",
+        "keywords": [
+          "черный дым",
+          "чёрный дым",
+          "коптит черным",
+          "коптит чёрным"
+        ],
+        "causes": [
+          "Богатая смесь",
+          "Проблема MAF/MAP",
+          "Подтекающая форсунка",
+          "Забит воздушный фильтр",
+          "Проблема турбины/наддува на дизеле"
+        ],
+        "checks": [
+          "Проверьте воздушный фильтр",
+          "Посмотрите fuel trims и MAF/MAP",
+          "Проверьте форсунки",
+          "Считайте коды наддува/смеси"
+        ]
+      }
+    },
+    "smoke_blue": {
+      "severity": "high",
+      "en": {
+        "label": "Blue exhaust smoke",
+        "keywords": [
+          "blue smoke",
+          "blue exhaust",
+          "smokes blue"
+        ],
+        "causes": [
+          "Engine oil entering combustion chamber",
+          "Valve stem seal wear",
+          "Piston ring/cylinder wear",
+          "Turbo oil seal problem"
+        ],
+        "checks": [
+          "Check engine oil level and consumption",
+          "Inspect spark plugs for oil fouling",
+          "Compression/leak-down test may be needed",
+          "On turbo engines inspect turbo oil leakage"
+        ]
+      },
+      "ka": {
+        "label": "ლურჯი კვამლი",
+        "keywords": [
+          "ლურჯი კვამლი",
+          "ლურჯად ბოლავს",
+          "ზეთს წვავს"
+        ],
+        "causes": [
+          "ზეთი ხვდება წვის კამერაში",
+          "სარქვლის სალნიკების ცვეთა",
+          "რგოლების/ცილინდრების ცვეთა",
+          "ტურბოს ზეთის სალნიკის პრობლემა"
+        ],
+        "checks": [
+          "შეამოწმეთ ზეთის დონე და ხარჯი",
+          "შეამოწმეთ სანთლებზე ზეთის კვალი",
+          "შეიძლება საჭირო გახდეს კომპრესიის/leak-down ტესტი",
+          "ტურბო ძრავზე შეამოწმეთ ტურბოს ზეთის გაჟონვა"
+        ]
+      },
+      "ru": {
+        "label": "Синий дым",
+        "keywords": [
+          "синий дым",
+          "сизый дым",
+          "жрет масло",
+          "жрёт масло"
+        ],
+        "causes": [
+          "Масло попадает в цилиндры",
+          "Износ маслосъёмных колпачков",
+          "Износ колец/цилиндров",
+          "Масляное уплотнение турбины"
+        ],
+        "checks": [
+          "Проверьте уровень и расход масла",
+          "Осмотрите свечи на масло",
+          "Может потребоваться компрессия/leak-down",
+          "На турбо проверьте утечку масла из турбины"
+        ]
+      }
+    },
+    "smoke_white": {
+      "severity": "high",
+      "en": {
+        "label": "Persistent white exhaust smoke",
+        "keywords": [
+          "white smoke",
+          "white exhaust",
+          "smokes white",
+          "sweet smell exhaust"
+        ],
+        "causes": [
+          "Coolant entering combustion chamber",
+          "Head gasket issue",
+          "Cylinder head crack",
+          "On diesel: unburned fuel during cold running"
+        ],
+        "checks": [
+          "Check coolant level when engine is cool",
+          "Look for coolant loss with no external leak",
+          "Check for overheating history",
+          "A cooling-system pressure or combustion-gas test may be needed"
+        ]
+      },
+      "ka": {
+        "label": "მუდმივი თეთრი კვამლი",
+        "keywords": [
+          "თეთრი კვამლი",
+          "თეთრად ბოლავს",
+          "თეთრი ბოლი",
+          "ანტიფრიზის სუნი"
+        ],
+        "causes": [
+          "ანტიფრიზი ხვდება წვის კამერაში",
+          "გალოვკის პრაკლადკის პრობლემა",
+          "ცილინდრის თავის ბზარი",
+          "დიზელზე: დაუწვავი საწვავი ცივზე"
+        ],
+        "checks": [
+          "გაგრილებულ ძრავზე შეამოწმეთ ანტიფრიზის დონე",
+          "დააკვირდით ანტიფრიზის კლებას გარეგანი გაჟონვის გარეშე",
+          "გაიხსენეთ ჰქონდა თუ არა გადახურება",
+          "შეიძლება საჭირო იყოს გაგრილების სისტემის წნევის ან გაზის ტესტი"
+        ]
+      },
+      "ru": {
+        "label": "Постоянный белый дым",
+        "keywords": [
+          "белый дым",
+          "дымит белым",
+          "сладкий запах выхлопа"
+        ],
+        "causes": [
+          "ОЖ попадает в цилиндры",
+          "Прокладка ГБЦ",
+          "Трещина ГБЦ",
+          "На дизеле: несгоревшее топливо на холодную"
+        ],
+        "checks": [
+          "На холодном двигателе проверьте уровень ОЖ",
+          "Следите за потерей ОЖ без внешней утечки",
+          "Учтите историю перегрева",
+          "Может понадобиться тест давления/газов в системе охлаждения"
+        ]
+      }
+    },
+    "battery_light": {
+      "severity": "high",
+      "en": {
+        "label": "Battery/charging warning light",
+        "keywords": [
+          "battery light",
+          "charging light",
+          "battery warning",
+          "alternator light"
+        ],
+        "causes": [
+          "Alternator not charging",
+          "Drive belt problem",
+          "Battery terminal/ground issue",
+          "Alternator wiring or fuse fault"
+        ],
+        "checks": [
+          "Measure charging voltage with engine running",
+          "Inspect belt condition",
+          "Check battery terminals and grounds",
+          "Do not continue far if system voltage is dropping"
+        ]
+      },
+      "ka": {
+        "label": "აკუმულატორის/დამუხტვის ინდიკატორი ანთია",
+        "keywords": [
+          "აკუმულატორის ნიშანი ანთია",
+          "აკუმულატორის ნათურა",
+          "გენერატორის ნათურა",
+          "დამუხტვა არ აქვს"
+        ],
+        "causes": [
+          "გენერატორი არ ტენის",
+          "რემენის პრობლემა",
+          "აკუმულატორის კლემის/მასის პრობლემა",
+          "გენერატორის გაყვანილობის ან ფიუზის პრობლემა"
+        ],
+        "checks": [
+          "მუშა ძრავზე გაზომეთ დამუხტვის ძაბვა",
+          "შეამოწმეთ რემენი",
+          "შეამოწმეთ კლემები და მასები",
+          "თუ ძაბვა ეცემა, შორს ნუ გააგრძელებთ მოძრაობას"
+        ]
+      },
+      "ru": {
+        "label": "Горит лампа аккумулятора/зарядки",
+        "keywords": [
+          "горит аккумулятор",
+          "лампа аккумулятора",
+          "нет зарядки",
+          "горит генератор"
+        ],
+        "causes": [
+          "Генератор не заряжает",
+          "Проблема приводного ремня",
+          "Клеммы/масса аккумулятора",
+          "Проводка или предохранитель генератора"
+        ],
+        "checks": [
+          "Измерьте напряжение зарядки на работающем двигателе",
+          "Проверьте ремень",
+          "Проверьте клеммы и массы",
+          "Не ехайте далеко, если напряжение падает"
+        ]
+      }
+    },
+    "transmission_shift": {
+      "severity": "high",
+      "en": {
+        "label": "Transmission shifts hard / slips",
+        "keywords": [
+          "hard shift",
+          "transmission slips",
+          "gearbox slips",
+          "jerks when shifting",
+          "harsh shifting",
+          "won't shift"
+        ],
+        "causes": [
+          "Low/dirty transmission fluid",
+          "Shift solenoid or valve body issue",
+          "Transmission speed sensor problem",
+          "Internal clutch/band wear",
+          "TCM electrical fault"
+        ],
+        "checks": [
+          "Scan for P0700-series codes",
+          "Check fluid level/condition if service procedure allows",
+          "Check input/output speed sensor data",
+          "Avoid heavy driving if slipping is severe"
+        ]
+      },
+      "ka": {
+        "label": "კარობკა ურტყამს / სრიალებს",
+        "keywords": [
+          "კარობკა ურტყამს",
+          "გადაცემისას ურტყამს",
+          "კარობკა სრიალებს",
+          "გადაცემას აგვიანებს",
+          "არ რთავს სიჩქარეს",
+          "ავტომატი ურტყამს"
+        ],
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის ან valve body-ის პრობლემა",
+          "ტრანსმისიის სიჩქარის სენსორის პრობლემა",
+          "შიდა ფრიქციონების ცვეთა",
+          "TCM ელექტრული პრობლემა"
+        ],
+        "checks": [
+          "წაიკითხეთ P0700-სერიის კოდები",
+          "თუ პროცედურა უშვებს, შეამოწმეთ ATF-ის დონე/მდგომარეობა",
+          "ნახეთ input/output speed sensor მონაცემები",
+          "თუ ძლიერ სრიალებს, მძიმე დატვირთვით ნუ ივლით"
+        ]
+      },
+      "ru": {
+        "label": "Коробка пинается / буксует",
+        "keywords": [
+          "коробка пинается",
+          "пинки коробки",
+          "буксует коробка",
+          "жестко переключает",
+          "не переключает передачу",
+          "автомат пинается"
+        ],
+        "causes": [
+          "Низкий/грязный ATF",
+          "Соленоид или гидроблок",
+          "Датчик скорости трансмиссии",
+          "Износ внутренних фрикционов",
+          "Электрическая неисправность TCM"
+        ],
+        "checks": [
+          "Считайте коды P0700-серии",
+          "Если процедура позволяет, проверьте уровень/состояние ATF",
+          "Посмотрите input/output speed",
+          "При сильной пробуксовке избегайте нагрузки"
+        ]
+      }
+    },
+    "brake_vibration": {
+      "severity": "medium",
+      "en": {
+        "label": "Vibration when braking",
+        "keywords": [
+          "vibration when braking",
+          "brake vibration",
+          "steering shakes braking",
+          "brake pedal pulsates"
+        ],
+        "causes": [
+          "Brake disc thickness variation/runout",
+          "Suspension or wheel bearing play",
+          "Wheel/tire problem",
+          "ABS intervention due to sensor issue"
+        ],
+        "checks": [
+          "Inspect brake discs and pads",
+          "Check wheel bearings and suspension joints",
+          "Check wheel/tire condition",
+          "Scan ABS if warning light is on"
+        ]
+      },
+      "ka": {
+        "label": "დამუხრუჭებისას ვიბრაცია",
+        "keywords": [
+          "დამუხრუჭებისას ვიბრაცია",
+          "ტორმუზზე კანკალებს",
+          "საჭე კანკალებს დამუხრუჭებისას",
+          "პედალი პულსირებს"
+        ],
+        "causes": [
+          "სამუხრუჭე დისკის დეფორმაცია/სისქის სხვაობა",
+          "სავალი ნაწილის ან საკისრის ლუფტი",
+          "ბორბლის/საბურავის პრობლემა",
+          "ABS სენსორის გამო არასწორი ჩარევა"
+        ],
+        "checks": [
+          "შეამოწმეთ დისკები და ხუნდები",
+          "შეამოწმეთ საკისრები და სავალი ნაწილი",
+          "შეამოწმეთ საბურავები/ბორბლები",
+          "თუ ABS ნათურა ანთია, წაიკითხეთ ABS კოდები"
+        ]
+      },
+      "ru": {
+        "label": "Вибрация при торможении",
+        "keywords": [
+          "вибрация при торможении",
+          "бьет руль при торможении",
+          "бьёт руль при торможении",
+          "пульсирует педаль"
+        ],
+        "causes": [
+          "Биение/неравномерная толщина тормозного диска",
+          "Люфт подвески или ступичного подшипника",
+          "Колесо/шина",
+          "Неверное срабатывание ABS из-за датчика"
+        ],
+        "checks": [
+          "Проверьте диски и колодки",
+          "Проверьте ступичные подшипники и подвеску",
+          "Проверьте колёса/шины",
+          "Если горит ABS, считайте коды ABS"
+        ]
+      }
+    }
+  }
+}

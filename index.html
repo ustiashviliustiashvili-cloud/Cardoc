@@ -13,12 +13,13 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
     body{background:#08111f;color:#fff;min-height:100vh}
-    button,input,select{font:inherit}
+    button,input,select,textarea{font:inherit}
     .app{width:100%;max-width:540px;margin:auto;padding:22px 18px 46px}
     .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
     .logo{font-size:32px;font-weight:800;color:#43a5ff;letter-spacing:-1px}
-    select,input{background:#0b1729;color:#fff;border:1px solid #355272;border-radius:14px;padding:14px;outline:none}
+    select,input,textarea{background:#0b1729;color:#fff;border:1px solid #355272;border-radius:14px;padding:14px;outline:none}
     select{min-width:126px}
+    textarea{width:100%;min-height:110px;resize:vertical;line-height:1.45}
     .hero,.panel{background:linear-gradient(135deg,#10223d,#0b1729);border:1px solid #1f3857;border-radius:24px;padding:22px 18px;margin-bottom:16px}
     .hero h1{font-size:28px;line-height:1.18;margin-bottom:10px}
     .hero p,.muted{color:#a7b6c9;line-height:1.5}
@@ -40,31 +41,32 @@
     #causes li{margin:7px 0;line-height:1.4}
     .badge{display:inline-block;margin-top:14px;padding:8px 12px;border-radius:9px;font-size:13px;font-weight:700}
     .low{background:#153e31;color:#67e3aa}.medium{background:#573514;color:#ffba5c}.high{background:#542327;color:#ff8f98}.critical{background:#5b1218;color:#ff6b78}
-    .panel{display:none}
-    .panel.active{display:block}
-    .panel h2{margin-bottom:14px}
+    .panel{display:none}.panel.active{display:block}.panel h2{margin-bottom:8px}
+    .panel-sub{color:#91a5bb;font-size:14px;line-height:1.45;margin-bottom:14px}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .form-grid input,.form-grid select{width:100%;min-width:0}
-    .full{grid-column:1/-1}
+    .form-grid input,.form-grid select{width:100%;min-width:0}.full{grid-column:1/-1}
     .car-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
     .car-item{background:#0b1729;border:1px solid #29405e;border-radius:16px;padding:14px}
     .car-row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
     .car-name{font-weight:700;margin-bottom:4px}.car-meta{color:#8fa4ba;font-size:13px;line-height:1.4}
-    .car-actions{display:flex;gap:8px;margin-top:12px}
-    .car-actions button{flex:1;padding:10px;font-size:13px}
+    .car-actions{display:flex;gap:8px;margin-top:12px}.car-actions button{flex:1;padding:10px;font-size:13px}
     .active-label{display:inline-block;margin-top:8px;font-size:12px;color:#67e3aa}
     .install-box{background:#111e31;border:1px solid #203853;border-radius:20px;padding:18px;margin-top:16px}
-    .install-box h3{margin-bottom:8px}
-    .install-box p{font-size:14px;color:#9eb0c4;line-height:1.5;margin-bottom:12px}
-    .hidden{display:none!important}
-    .db-status{margin-top:10px;font-size:12px;color:#7890a8}
-    @media(max-width:390px){
-      .app{padding-left:14px;padding-right:14px}
-      .logo{font-size:28px}
-      .hero h1{font-size:26px}
-      .form-grid{grid-template-columns:1fr}
-      .full{grid-column:auto}
-    }
+    .install-box h3{margin-bottom:8px}.install-box p{font-size:14px;color:#9eb0c4;line-height:1.5;margin-bottom:12px}
+    .hidden{display:none!important}.db-status{margin-top:10px;font-size:12px;color:#7890a8}
+    .symptom-chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+    .chip{background:#12253c;border:1px solid #294969;color:#dcecff;padding:10px 12px;border-radius:999px;font-size:13px;font-weight:600}
+    .chip.selected{background:#168cff;border-color:#168cff;color:#fff}
+    .symptom-actions{display:flex;gap:10px;margin-top:12px}.symptom-actions button{flex:1}
+    .symptom-result{display:none;margin-top:16px;background:#0b1729;border:1px solid #29405e;border-radius:18px;padding:16px}
+    .symptom-result h3{margin-bottom:8px}.symptom-result .car-note{color:#8fbbe1;font-size:13px;margin-bottom:10px}
+    .result-card{border-top:1px solid #203853;padding-top:14px;margin-top:14px}
+    .result-card:first-of-type{border-top:0;padding-top:0;margin-top:0}
+    .result-card h4{font-size:17px;margin-bottom:7px;color:#fff}
+    .result-card ul{margin:8px 0 0 20px;color:#c9d5e3}.result-card li{margin:6px 0;line-height:1.4}
+    .small-label{font-size:12px;color:#86a0b8;text-transform:uppercase;letter-spacing:.04em;margin-top:10px}
+    .disclaimer{font-size:12px;color:#8296aa;line-height:1.45;margin-top:14px}
+    @media(max-width:390px){.app{padding-left:14px;padding-right:14px}.logo{font-size:28px}.hero h1{font-size:26px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.symptom-actions{flex-direction:column}}
   </style>
 </head>
 <body>
@@ -83,7 +85,6 @@
     <p id="subtitle">Enter an OBD trouble code and CarDoc will explain the problem.</p>
     <div id="activeCarBox" class="active-car"></div>
     <div id="dbStatus" class="db-status">Loading code database…</div>
-
     <div class="search-box">
       <input id="codeInput" placeholder="EXAMPLE: P0301" maxlength="5" autocomplete="off">
       <button id="scanButton" class="primary" onclick="diagnose()">Scan</button>
@@ -94,7 +95,7 @@
     <div class="card" onclick="openPanel('garagePanel')">
       <div class="icon">🚗</div><h3 id="garageTitle">My Garage</h3><p id="garageText">Save multiple cars</p>
     </div>
-    <div class="card">
+    <div class="card" onclick="openSymptoms()">
       <div class="icon">🤖</div><h3 id="symptomsTitle">Symptoms</h3><p id="symptomsText">Describe the problem</p>
     </div>
     <div class="card">
@@ -110,14 +111,10 @@
     <div class="form-grid">
       <input id="carMake" placeholder="Make">
       <input id="carModel" placeholder="Model">
-      <input id="carYear" type="number" inputmode="numeric" placeholder="Year" min="1950" max="2030">
+      <input id="carYear" type="number" inputmode="numeric" placeholder="Year" min="1950" max="2035">
       <input id="carEngine" placeholder="Engine, e.g. 2.3">
       <select id="carFuel">
-        <option value="Petrol">Petrol</option>
-        <option value="Diesel">Diesel</option>
-        <option value="Hybrid">Hybrid</option>
-        <option value="Electric">Electric</option>
-        <option value="LPG">LPG</option>
+        <option value="Petrol">Petrol</option><option value="Diesel">Diesel</option><option value="Hybrid">Hybrid</option><option value="Electric">Electric</option><option value="LPG">LPG</option>
       </select>
       <button class="primary" onclick="addCar()" id="addCarBtn">Add car</button>
       <button class="secondary full" onclick="closePanels()" id="closeGarageBtn">Close</button>
@@ -125,12 +122,22 @@
     <div id="carList" class="car-list"></div>
   </div>
 
+  <div id="symptomsPanel" class="panel">
+    <h2 id="symptomsPanelTitle">Symptom diagnosis</h2>
+    <p class="panel-sub" id="symptomsPanelSub">Choose a common symptom or describe what the car is doing.</p>
+    <div id="symptomChips" class="symptom-chips"></div>
+    <textarea id="symptomText" placeholder="Example: engine shakes at idle and has no power"></textarea>
+    <div class="symptom-actions">
+      <button class="primary" id="analyzeSymptomsBtn" onclick="analyzeSymptoms()">Analyze symptoms</button>
+      <button class="secondary" id="clearSymptomsBtn" onclick="clearSymptoms()">Clear</button>
+    </div>
+    <div id="symptomResult" class="symptom-result"></div>
+    <p class="disclaimer" id="symptomDisclaimer">Symptom results show possible causes, not a confirmed diagnosis.</p>
+    <button class="secondary" style="width:100%;margin-top:12px" id="closeSymptomsBtn" onclick="closePanels()">Close</button>
+  </div>
+
   <div id="result">
-    <h2 id="resultCode"></h2>
-    <p id="resultTitle"></p>
-    <p id="categoryLine"></p>
-    <ul id="causes"></ul>
-    <span class="badge" id="severity"></span>
+    <h2 id="resultCode"></h2><p id="resultTitle"></p><p id="categoryLine"></p><ul id="causes"></ul><span class="badge" id="severity"></span>
   </div>
 
   <div class="install-box" id="installBox">
@@ -143,219 +150,75 @@
 </div>
 
 <script>
-let codeDatabase = {};
-let deferredPrompt = null;
+let codeDatabase={}, symptomDatabase={}, deferredPrompt=null, selectedSymptomId=null;
 
-const T = {
-  en:{
-    title:"What's wrong with your car?",subtitle:"Enter an OBD trouble code and CarDoc will explain the problem.",
-    placeholder:"EXAMPLE: P0301",scan:"Scan",garageTitle:"My Garage",garageText:"Save multiple cars",
-    symptomsTitle:"Symptoms",symptomsText:"Describe the problem",historyTitle:"History",historyText:"Previous diagnostics",
-    maintenanceTitle:"Maintenance",maintenanceText:"Service reminders",garagePanelTitle:"My Garage",
-    make:"Make",model:"Model",year:"Year",engine:"Engine, e.g. 2.3",addCar:"Add car",close:"Close",
-    select:"Select",delete:"Delete",active:"Active car",noCar:"No active car selected",emptyAlert:"Enter an OBD code",
-    notFound:"Code not found in the current database.",category:"Category",
-    sev:{low:"Low",medium:"Medium",high:"High",critical:"Critical"},
-    loaded:n=>`${n} OBD-II codes loaded`,dbError:"Could not load codes.json",
-    installTitle:"Install CarDoc",installText:"Add CarDoc to your home screen and use it like an app.",
-    install:"Install CarDoc",iosBtn:"iPhone: Add to Home Screen",
-    iosHelp:"On iPhone: tap Share in Safari, then choose Add to Home Screen, then Add."
-  },
-  ka:{
-    title:"რა პრობლემა აქვს თქვენს მანქანას?",subtitle:"შეიყვანეთ OBD შეცდომის კოდი და CarDoc აგიხსნით პრობლემას.",
-    placeholder:"მაგალითი: P0301",scan:"ძებნა",garageTitle:"ჩემი მანქანები",garageText:"შეინახეთ რამდენიმე მანქანა",
-    symptomsTitle:"სიმპტომები",symptomsText:"აღწერეთ პრობლემა",historyTitle:"ისტორია",historyText:"წინა დიაგნოსტიკა",
-    maintenanceTitle:"მომსახურება",maintenanceText:"სერვისის შეხსენებები",garagePanelTitle:"ჩემი მანქანები",
-    make:"მარკა",model:"მოდელი",year:"წელი",engine:"ძრავი, მაგ. 2.3",addCar:"მანქანის დამატება",close:"დახურვა",
-    select:"არჩევა",delete:"წაშლა",active:"არჩეული მანქანა",noCar:"არჩეული მანქანა ჯერ არ არის",emptyAlert:"შეიყვანეთ OBD კოდი",
-    notFound:"ეს კოდი მიმდინარე ბაზაში ვერ მოიძებნა.",category:"კატეგორია",
-    sev:{low:"დაბალი",medium:"საშუალო",high:"მაღალი",critical:"კრიტიკული"},
-    loaded:n=>`ჩატვირთულია ${n} OBD-II კოდი`,dbError:"codes.json ვერ ჩაიტვირთა",
-    installTitle:"CarDoc-ის დაყენება",installText:"დაამატეთ CarDoc მთავარ ეკრანზე და გამოიყენეთ როგორც აპი.",
-    install:"CarDoc-ის დაყენება",iosBtn:"iPhone: მთავარ ეკრანზე დამატება",
-    iosHelp:"iPhone-ზე Safari-ში დააჭირეთ Share-ს, შემდეგ Add to Home Screen-ს და ბოლოს Add-ს."
-  },
-  ru:{
-    title:"Что не так с вашим автомобилем?",subtitle:"Введите код OBD, и CarDoc объяснит возможную проблему.",
-    placeholder:"ПРИМЕР: P0301",scan:"Поиск",garageTitle:"Мои автомобили",garageText:"Сохраните несколько автомобилей",
-    symptomsTitle:"Симптомы",symptomsText:"Опишите проблему",historyTitle:"История",historyText:"Предыдущая диагностика",
-    maintenanceTitle:"Обслуживание",maintenanceText:"Напоминания о сервисе",garagePanelTitle:"Мои автомобили",
-    make:"Марка",model:"Модель",year:"Год",engine:"Двигатель, напр. 2.3",addCar:"Добавить авто",close:"Закрыть",
-    select:"Выбрать",delete:"Удалить",active:"Выбранный автомобиль",noCar:"Автомобиль не выбран",emptyAlert:"Введите OBD-код",
-    notFound:"Код не найден в текущей базе.",category:"Категория",
-    sev:{low:"Низкая",medium:"Средняя",high:"Высокая",critical:"Критическая"},
-    loaded:n=>`Загружено кодов OBD-II: ${n}`,dbError:"Не удалось загрузить codes.json",
-    installTitle:"Установить CarDoc",installText:"Добавьте CarDoc на главный экран и используйте как приложение.",
-    install:"Установить CarDoc",iosBtn:"iPhone: добавить на экран Домой",
-    iosHelp:"На iPhone откройте сайт в Safari, нажмите Share, затем Add to Home Screen и Add."
-  }
+const T={
+ en:{title:"What's wrong with your car?",subtitle:"Enter an OBD trouble code and CarDoc will explain the problem.",placeholder:"EXAMPLE: P0301",scan:"Scan",garageTitle:"My Garage",garageText:"Save multiple cars",symptomsTitle:"Symptoms",symptomsText:"Describe the problem",historyTitle:"History",historyText:"Previous diagnostics",maintenanceTitle:"Maintenance",maintenanceText:"Service reminders",garagePanelTitle:"My Garage",make:"Make",model:"Model",year:"Year",engine:"Engine, e.g. 2.3",addCar:"Add car",close:"Close",select:"Select",delete:"Delete",active:"Active car",noCar:"No active car selected",emptyAlert:"Enter an OBD code",notFound:"Code not found in the current database.",category:"Category",sev:{low:"Low",medium:"Medium",high:"High",critical:"Critical"},loaded:n=>`${n} OBD-II codes loaded`,dbError:"Could not load codes.json",installTitle:"Install CarDoc",installText:"Add CarDoc to your home screen and use it like an app.",install:"Install CarDoc",iosBtn:"iPhone: Add to Home Screen",iosHelp:"On iPhone: tap Share in Safari, then choose Add to Home Screen, then Add.",symPanel:"Symptom diagnosis",symSub:"Choose a common symptom or describe what the car is doing.",symPlaceholder:"Example: engine shakes at idle and has no power",analyze:"Analyze symptoms",clear:"Clear",possible:"Possible causes",checkFirst:"Check first",match:"Best match",noSymptom:"Describe a symptom or choose one above.",noMatch:"I couldn't confidently match that symptom yet. Try simpler words or choose a common symptom.",disclaimer:"Symptom results show possible causes, not a confirmed diagnosis.",symLoaded:n=>`${n} symptom groups loaded`},
+ ka:{title:"რა პრობლემა აქვს თქვენს მანქანას?",subtitle:"შეიყვანეთ OBD შეცდომის კოდი და CarDoc აგიხსნით პრობლემას.",placeholder:"მაგალითი: P0301",scan:"ძებნა",garageTitle:"ჩემი მანქანები",garageText:"შეინახეთ რამდენიმე მანქანა",symptomsTitle:"სიმპტომები",symptomsText:"აღწერეთ პრობლემა",historyTitle:"ისტორია",historyText:"წინა დიაგნოსტიკა",maintenanceTitle:"მომსახურება",maintenanceText:"სერვისის შეხსენებები",garagePanelTitle:"ჩემი მანქანები",make:"მარკა",model:"მოდელი",year:"წელი",engine:"ძრავი, მაგ. 2.3",addCar:"მანქანის დამატება",close:"დახურვა",select:"არჩევა",delete:"წაშლა",active:"არჩეული მანქანა",noCar:"არჩეული მანქანა ჯერ არ არის",emptyAlert:"შეიყვანეთ OBD კოდი",notFound:"ეს კოდი მიმდინარე ბაზაში ვერ მოიძებნა.",category:"კატეგორია",sev:{low:"დაბალი",medium:"საშუალო",high:"მაღალი",critical:"კრიტიკული"},loaded:n=>`ჩატვირთულია ${n} OBD-II კოდი`,dbError:"codes.json ვერ ჩაიტვირთა",installTitle:"CarDoc-ის დაყენება",installText:"დაამატეთ CarDoc მთავარ ეკრანზე და გამოიყენეთ როგორც აპი.",install:"CarDoc-ის დაყენება",iosBtn:"iPhone: მთავარ ეკრანზე დამატება",iosHelp:"iPhone-ზე Safari-ში დააჭირეთ Share-ს, შემდეგ Add to Home Screen-ს და ბოლოს Add-ს.",symPanel:"სიმპტომებით დიაგნოსტიკა",symSub:"აირჩიეთ გავრცელებული სიმპტომი ან დაწერეთ რას აკეთებს მანქანა.",symPlaceholder:"მაგალითი: ძრავი უქმზე კანკალებს და ძალა არ აქვს",analyze:"სიმპტომების ანალიზი",clear:"გასუფთავება",possible:"შესაძლო მიზეზები",checkFirst:"პირველად შეამოწმეთ",match:"სავარაუდო დამთხვევა",noSymptom:"აღწერეთ სიმპტომი ან აირჩიეთ ზემოთ.",noMatch:"ამ სიმპტომის ზუსტად დამთხვევა ჯერ ვერ ვიპოვე. სცადეთ უფრო მარტივი სიტყვებით ან აირჩიეთ გავრცელებული სიმპტომი.",disclaimer:"სიმპტომებით პასუხი აჩვენებს შესაძლო მიზეზებს და არა საბოლოო დიაგნოზს.",symLoaded:n=>`ჩატვირთულია ${n} სიმპტომის ჯგუფი`},
+ ru:{title:"Что не так с вашим автомобилем?",subtitle:"Введите код OBD, и CarDoc объяснит возможную проблему.",placeholder:"ПРИМЕР: P0301",scan:"Поиск",garageTitle:"Мои автомобили",garageText:"Сохраните несколько автомобилей",symptomsTitle:"Симптомы",symptomsText:"Опишите проблему",historyTitle:"История",historyText:"Предыдущая диагностика",maintenanceTitle:"Обслуживание",maintenanceText:"Напоминания о сервисе",garagePanelTitle:"Мои автомобили",make:"Марка",model:"Модель",year:"Год",engine:"Двигатель, напр. 2.3",addCar:"Добавить авто",close:"Закрыть",select:"Выбрать",delete:"Удалить",active:"Выбранный автомобиль",noCar:"Автомобиль не выбран",emptyAlert:"Введите OBD-код",notFound:"Код не найден в текущей базе.",category:"Категория",sev:{low:"Низкая",medium:"Средняя",high:"Высокая",critical:"Критическая"},loaded:n=>`Загружено кодов OBD-II: ${n}`,dbError:"Не удалось загрузить codes.json",installTitle:"Установить CarDoc",installText:"Добавьте CarDoc на главный экран и используйте как приложение.",install:"Установить CarDoc",iosBtn:"iPhone: добавить на экран Домой",iosHelp:"На iPhone откройте сайт в Safari, нажмите Share, затем Add to Home Screen и Add.",symPanel:"Диагностика по симптомам",symSub:"Выберите типичный симптом или опишите поведение автомобиля.",symPlaceholder:"Например: двигатель трясёт на холостом и нет тяги",analyze:"Анализировать симптомы",clear:"Очистить",possible:"Возможные причины",checkFirst:"Сначала проверьте",match:"Лучшее совпадение",noSymptom:"Опишите симптом или выберите один выше.",noMatch:"Не удалось уверенно сопоставить симптом. Попробуйте более простые слова или выберите типичный симптом.",disclaimer:"Результат по симптомам показывает возможные причины, а не окончательный диагноз.",symLoaded:n=>`Загружено групп симптомов: ${n}`}
 };
 
-function lang(){return document.getElementById("language").value}
-function tr(){return T[lang()]}
+function lang(){return document.getElementById("language").value} function tr(){return T[lang()]}
 
-async function loadDatabase(){
-  try{
-    const r=await fetch("./codes.json",{cache:"no-store"});
-    if(!r.ok) throw new Error(r.status);
-    const d=await r.json();
-    codeDatabase=d.codes||{};
-    document.getElementById("dbStatus").textContent=tr().loaded(Object.keys(codeDatabase).length);
-  }catch(e){
-    document.getElementById("dbStatus").textContent=tr().dbError;
-  }
+async function loadDatabases(){
+  try{const r=await fetch("./codes.json",{cache:"no-store"});if(!r.ok)throw new Error();const d=await r.json();codeDatabase=d.codes||{};updateDbStatus()}catch(e){document.getElementById("dbStatus").textContent=tr().dbError}
+  try{const r=await fetch("./symptoms.json",{cache:"no-store"});if(!r.ok)throw new Error();const d=await r.json();symptomDatabase=d.symptoms||{};renderSymptomChips();updateDbStatus()}catch(e){console.error("symptoms.json",e)}
 }
+function updateDbStatus(){const a=Object.keys(codeDatabase).length,b=Object.keys(symptomDatabase).length;document.getElementById("dbStatus").textContent=(a?tr().loaded(a):"")+(a&&b?" • ":"")+(b?tr().symLoaded(b):"")}
 
-function getCars(){return JSON.parse(localStorage.getItem("cardoc_cars")||"[]")}
-function saveCars(cars){localStorage.setItem("cardoc_cars",JSON.stringify(cars))}
-function getActiveId(){return localStorage.getItem("cardoc_active_car")}
-function setActiveId(id){localStorage.setItem("cardoc_active_car",id);renderCars();renderActiveCar()}
-
-function addCar(){
-  const make=document.getElementById("carMake").value.trim();
-  const model=document.getElementById("carModel").value.trim();
-  const year=document.getElementById("carYear").value.trim();
-  const engine=document.getElementById("carEngine").value.trim();
-  const fuel=document.getElementById("carFuel").value;
-  if(!make||!model||!year){alert(lang()==="ka"?"შეავსეთ მარკა, მოდელი და წელი":lang()==="ru"?"Заполните марку, модель и год":"Fill in make, model and year");return}
-  const cars=getCars();
-  const car={id:String(Date.now()),make,model,year,engine,fuel};
-  cars.push(car);saveCars(cars);
-  if(!getActiveId()) localStorage.setItem("cardoc_active_car",car.id);
-  ["carMake","carModel","carYear","carEngine"].forEach(id=>document.getElementById(id).value="");
-  renderCars();renderActiveCar();
-}
-
-function deleteCar(id){
-  let cars=getCars().filter(c=>c.id!==id);
-  saveCars(cars);
-  if(getActiveId()===id){
-    if(cars.length) localStorage.setItem("cardoc_active_car",cars[0].id);
-    else localStorage.removeItem("cardoc_active_car");
-  }
-  renderCars();renderActiveCar();
-}
-
-function renderCars(){
-  const box=document.getElementById("carList");
-  const cars=getCars(), active=getActiveId();
-  box.innerHTML="";
-  cars.forEach(c=>{
-    const item=document.createElement("div");
-    item.className="car-item";
-    item.innerHTML=`
-      <div class="car-row">
-        <div>
-          <div class="car-name">${escapeHtml(c.make)} ${escapeHtml(c.model)}</div>
-          <div class="car-meta">${escapeHtml(c.year)} • ${escapeHtml(c.engine||"—")} • ${escapeHtml(c.fuel)}</div>
-          ${c.id===active?`<span class="active-label">✓ ${tr().active}</span>`:""}
-        </div>
-      </div>
-      <div class="car-actions">
-        <button class="secondary" onclick="setActiveId('${c.id}')">${tr().select}</button>
-        <button class="danger" onclick="deleteCar('${c.id}')">${tr().delete}</button>
-      </div>`;
-    box.appendChild(item);
-  });
-}
-
-function renderActiveCar(){
-  const cars=getCars(), active=cars.find(c=>c.id===getActiveId());
-  const box=document.getElementById("activeCarBox");
-  box.textContent=active?`${tr().active}: ${active.make} ${active.model} ${active.year}${active.engine?" • "+active.engine:""}`:tr().noCar;
-}
-
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function getCars(){return JSON.parse(localStorage.getItem("cardoc_cars")||"[]")} function saveCars(c){localStorage.setItem("cardoc_cars",JSON.stringify(c))}
+function getActiveId(){return localStorage.getItem("cardoc_active_car")} function setActiveId(id){localStorage.setItem("cardoc_active_car",id);renderCars();renderActiveCar()}
+function activeCar(){return getCars().find(c=>c.id===getActiveId())||null}
+function addCar(){const make=carMake.value.trim(),model=carModel.value.trim(),year=carYear.value.trim(),engine=carEngine.value.trim(),fuel=carFuel.value;if(!make||!model||!year){alert(lang()==="ka"?"შეავსეთ მარკა, მოდელი და წელი":lang()==="ru"?"Заполните марку, модель и год":"Fill in make, model and year");return}const cars=getCars(),car={id:String(Date.now()),make,model,year,engine,fuel};cars.push(car);saveCars(cars);if(!getActiveId())localStorage.setItem("cardoc_active_car",car.id);["carMake","carModel","carYear","carEngine"].forEach(id=>document.getElementById(id).value="");renderCars();renderActiveCar()}
+function deleteCar(id){let cars=getCars().filter(c=>c.id!==id);saveCars(cars);if(getActiveId()===id){if(cars.length)localStorage.setItem("cardoc_active_car",cars[0].id);else localStorage.removeItem("cardoc_active_car")}renderCars();renderActiveCar()}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function renderCars(){const box=carList,cars=getCars(),active=getActiveId();box.innerHTML="";cars.forEach(c=>{const item=document.createElement("div");item.className="car-item";item.innerHTML=`<div class="car-row"><div><div class="car-name">${esc(c.make)} ${esc(c.model)}</div><div class="car-meta">${esc(c.year)} • ${esc(c.engine||"—")} • ${esc(c.fuel)}</div>${c.id===active?`<span class="active-label">✓ ${tr().active}</span>`:""}</div></div><div class="car-actions"><button class="secondary" onclick="setActiveId('${c.id}')">${tr().select}</button><button class="danger" onclick="deleteCar('${c.id}')">${tr().delete}</button></div>`;box.appendChild(item)})}
+function renderActiveCar(){const c=activeCar();activeCarBox.textContent=c?`${tr().active}: ${c.make} ${c.model} ${c.year}${c.engine?" • "+c.engine:""}`:tr().noCar}
 
 function openPanel(id){closePanels();document.getElementById(id).classList.add("active");document.getElementById(id).scrollIntoView({behavior:"smooth"})}
 function closePanels(){document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"))}
+function openSymptoms(){openPanel("symptomsPanel");renderSymptomChips()}
 
-function diagnose(){
-  const code=document.getElementById("codeInput").value.trim().toUpperCase();
-  if(!code){alert(tr().emptyAlert);return}
-  const entry=codeDatabase[code], result=document.getElementById("result"), causes=document.getElementById("causes");
-  document.getElementById("resultCode").textContent=code;causes.innerHTML="";
-  if(entry){
-    const loc=entry[lang()]||entry.en;
-    document.getElementById("resultTitle").textContent=loc.title;
-    document.getElementById("categoryLine").textContent=`${tr().category}: ${entry.category}`;
-    (loc.causes||[]).forEach(x=>{const li=document.createElement("li");li.textContent=x;causes.appendChild(li)});
-    const sev=document.getElementById("severity");sev.className="badge "+entry.severity;sev.textContent=tr().sev[entry.severity]||entry.severity;
-  }else{
-    document.getElementById("resultTitle").textContent=tr().notFound;
-    document.getElementById("categoryLine").textContent="";
-    document.getElementById("severity").textContent="";
-  }
-  result.style.display="block";
-  result.scrollIntoView({behavior:"smooth",block:"nearest"});
+function renderSymptomChips(){const box=symptomChips;box.innerHTML="";Object.entries(symptomDatabase).slice(0,12).forEach(([id,s])=>{const b=document.createElement("button");b.className="chip"+(selectedSymptomId===id?" selected":"");b.textContent=(s[lang()]||s.en).label;b.onclick=()=>{selectedSymptomId=selectedSymptomId===id?null:id;renderSymptomChips()};box.appendChild(b)})}
+function clearSymptoms(){selectedSymptomId=null;symptomText.value="";symptomResult.style.display="none";symptomResult.innerHTML="";renderSymptomChips()}
+function normalize(s){return s.toLowerCase().replace(/[.,!?;:()[\]{}"'`~]/g," ").replace(/\s+/g," ").trim()}
+function scoreEntry(entry,text,l){let score=0;const loc=entry[l]||entry.en;(loc.keywords||[]).forEach(k=>{const kk=normalize(k);if(text.includes(kk))score+=3;else{const words=kk.split(" ").filter(x=>x.length>2);const hits=words.filter(w=>text.includes(w)).length;if(words.length&&hits>=Math.max(1,Math.ceil(words.length*.6)))score+=hits}});return score}
+function analyzeSymptoms(){
+  const t=tr(), text=normalize(symptomText.value);
+  if(!text && !selectedSymptomId){alert(t.noSymptom);return}
+  let scored=[];
+  Object.entries(symptomDatabase).forEach(([id,e])=>{let s=scoreEntry(e,text,lang());if(selectedSymptomId===id)s+=8;if(s>0)scored.push({id,e,score:s})});
+  scored.sort((a,b)=>b.score-a.score);scored=scored.slice(0,3);
+  const box=symptomResult;box.innerHTML="";
+  if(!scored.length){box.innerHTML=`<p class="muted">${t.noMatch}</p>`;box.style.display="block";return}
+  const car=activeCar();
+  const head=document.createElement("h3");head.textContent=t.match;box.appendChild(head);
+  if(car){const note=document.createElement("div");note.className="car-note";note.textContent=`${t.active}: ${car.make} ${car.model} ${car.year}${car.engine?" • "+car.engine:""}`;box.appendChild(note)}
+  scored.forEach(({e})=>{
+    const loc=e[lang()]||e.en;
+    const card=document.createElement("div");card.className="result-card";
+    const h=document.createElement("h4");h.textContent=loc.label;card.appendChild(h);
+    const badge=document.createElement("span");badge.className="badge "+e.severity;badge.textContent=t.sev[e.severity]||e.severity;card.appendChild(badge);
+    const l1=document.createElement("div");l1.className="small-label";l1.textContent=t.possible;card.appendChild(l1);
+    const ul1=document.createElement("ul");(loc.causes||[]).forEach(x=>{const li=document.createElement("li");li.textContent=x;ul1.appendChild(li)});card.appendChild(ul1);
+    const l2=document.createElement("div");l2.className="small-label";l2.textContent=t.checkFirst;card.appendChild(l2);
+    const ul2=document.createElement("ul");(loc.checks||[]).forEach(x=>{const li=document.createElement("li");li.textContent=x;ul2.appendChild(li)});card.appendChild(ul2);
+    box.appendChild(card)
+  });
+  box.style.display="block";box.scrollIntoView({behavior:"smooth",block:"nearest"})
 }
 
-function applyLanguage(){
-  const t=tr();
-  document.getElementById("title").textContent=t.title;
-  document.getElementById("subtitle").textContent=t.subtitle;
-  document.getElementById("codeInput").placeholder=t.placeholder;
-  document.getElementById("scanButton").textContent=t.scan;
-  document.getElementById("garageTitle").textContent=t.garageTitle;
-  document.getElementById("garageText").textContent=t.garageText;
-  document.getElementById("symptomsTitle").textContent=t.symptomsTitle;
-  document.getElementById("symptomsText").textContent=t.symptomsText;
-  document.getElementById("historyTitle").textContent=t.historyTitle;
-  document.getElementById("historyText").textContent=t.historyText;
-  document.getElementById("maintenanceTitle").textContent=t.maintenanceTitle;
-  document.getElementById("maintenanceText").textContent=t.maintenanceText;
-  document.getElementById("garagePanelTitle").textContent=t.garagePanelTitle;
-  document.getElementById("carMake").placeholder=t.make;
-  document.getElementById("carModel").placeholder=t.model;
-  document.getElementById("carYear").placeholder=t.year;
-  document.getElementById("carEngine").placeholder=t.engine;
-  document.getElementById("addCarBtn").textContent=t.addCar;
-  document.getElementById("closeGarageBtn").textContent=t.close;
-  document.getElementById("installTitle").textContent=t.installTitle;
-  document.getElementById("installText").textContent=t.installText;
-  document.getElementById("installBtn").textContent=t.install;
-  document.getElementById("iosHelpBtn").textContent=t.iosBtn;
-  localStorage.setItem("cardoc_language",lang());
-  renderCars();renderActiveCar();
-  if(Object.keys(codeDatabase).length) document.getElementById("dbStatus").textContent=t.loaded(Object.keys(codeDatabase).length);
-}
+function diagnose(){const code=codeInput.value.trim().toUpperCase();if(!code){alert(tr().emptyAlert);return}const entry=codeDatabase[code],causesEl=causes;resultCode.textContent=code;causesEl.innerHTML="";if(entry){const loc=entry[lang()]||entry.en;resultTitle.textContent=loc.title;categoryLine.textContent=`${tr().category}: ${entry.category}`;(loc.causes||[]).forEach(x=>{const li=document.createElement("li");li.textContent=x;causesEl.appendChild(li)});severity.className="badge "+entry.severity;severity.textContent=tr().sev[entry.severity]||entry.severity}else{resultTitle.textContent=tr().notFound;categoryLine.textContent="";severity.textContent=""}result.style.display="block";result.scrollIntoView({behavior:"smooth",block:"nearest"})}
 
-function showIosHelp(){
-  const p=document.getElementById("iosHelp");p.textContent=tr().iosHelp;p.classList.remove("hidden")
-}
+function applyLanguage(){const t=tr();title.textContent=t.title;subtitle.textContent=t.subtitle;codeInput.placeholder=t.placeholder;scanButton.textContent=t.scan;garageTitle.textContent=t.garageTitle;garageText.textContent=t.garageText;symptomsTitle.textContent=t.symptomsTitle;symptomsText.textContent=t.symptomsText;historyTitle.textContent=t.historyTitle;historyText.textContent=t.historyText;maintenanceTitle.textContent=t.maintenanceTitle;maintenanceText.textContent=t.maintenanceText;garagePanelTitle.textContent=t.garagePanelTitle;carMake.placeholder=t.make;carModel.placeholder=t.model;carYear.placeholder=t.year;carEngine.placeholder=t.engine;addCarBtn.textContent=t.addCar;closeGarageBtn.textContent=t.close;installTitle.textContent=t.installTitle;installText.textContent=t.installText;installBtn.textContent=t.install;iosHelpBtn.textContent=t.iosBtn;symptomsPanelTitle.textContent=t.symPanel;symptomsPanelSub.textContent=t.symSub;symptomText.placeholder=t.symPlaceholder;analyzeSymptomsBtn.textContent=t.analyze;clearSymptomsBtn.textContent=t.clear;symptomDisclaimer.textContent=t.disclaimer;closeSymptomsBtn.textContent=t.close;localStorage.setItem("cardoc_language",lang());renderCars();renderActiveCar();renderSymptomChips();updateDbStatus()}
 
-window.addEventListener("beforeinstallprompt",e=>{
-  e.preventDefault();deferredPrompt=e;
-  document.getElementById("installBtn").classList.remove("hidden");
-});
-
-document.getElementById("installBtn").addEventListener("click",async()=>{
-  if(!deferredPrompt)return;
-  deferredPrompt.prompt();
-  await deferredPrompt.userChoice;
-  deferredPrompt=null;
-  document.getElementById("installBtn").classList.add("hidden");
-});
-
-function setupInstallUI(){
-  const isIos=/iphone|ipad|ipod/i.test(navigator.userAgent);
-  const isStandalone=window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone===true;
-  if(isStandalone){document.getElementById("installBox").classList.add("hidden");return}
-  if(isIos) document.getElementById("iosHelpBtn").classList.remove("hidden");
-}
-
-document.getElementById("language").addEventListener("change",applyLanguage);
-document.getElementById("codeInput").addEventListener("keydown",e=>{if(e.key==="Enter")diagnose()});
-
-const savedLang=localStorage.getItem("cardoc_language")||"en";
-document.getElementById("language").value=savedLang;
-applyLanguage();
-loadDatabase();
-setupInstallUI();
-
-if("serviceWorker" in navigator){
-  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.error));
-}
+function showIosHelp(){iosHelp.textContent=tr().iosHelp;iosHelp.classList.remove("hidden")}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;installBtn.classList.remove("hidden")});
+installBtn.addEventListener("click",async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.classList.add("hidden")});
+function setupInstallUI(){const isIos=/iphone|ipad|ipod/i.test(navigator.userAgent),standalone=matchMedia("(display-mode: standalone)").matches||navigator.standalone===true;if(standalone){installBox.classList.add("hidden");return}if(isIos)iosHelpBtn.classList.remove("hidden")}
+language.addEventListener("change",applyLanguage);codeInput.addEventListener("keydown",e=>{if(e.key==="Enter")diagnose()});
+const saved=localStorage.getItem("cardoc_language")||"en";language.value=saved;applyLanguage();loadDatabases();setupInstallUI();
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.error));
 </script>
 </body>
 </html>
