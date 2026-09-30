@@ -178,6 +178,7 @@
     <div class="obd-buttons">
       <button id="connectObdBtn" class="primary" onclick="connectObd()">Connect OBD2</button>
       <button id="readCodesBtn" class="secondary" onclick="readDtcCodes()" disabled>Read codes</button>
+      <button id="clearCodesBtn" class="danger" onclick="clearDtcCodes()" disabled>Clear engine codes</button>
       <button id="disconnectObdBtn" class="secondary" onclick="disconnectObd()" disabled>Disconnect</button>
       <button id="clearObdResultsBtn" class="secondary" onclick="clearObdResults()">Clear results</button>
     </div>
@@ -268,7 +269,10 @@ const T = {
     disclaimer:"Symptom results show possible causes, not a confirmed diagnosis.",symLoaded:n=>`${n} symptom groups loaded`,
     obdPanel:"OBD2 connection",obdSub:"Connect a compatible BLE OBD-II adapter, then read stored trouble codes.",
     notConnected:"Not connected",connecting:"Connecting…",connected:n=>`Connected: ${n}`,disconnected:"Disconnected",
-    connect:"Connect OBD2",readCodes:"Read codes",disconnect:"Disconnect",clearResults:"Clear results",
+    connect:"Connect OBD2",readCodes:"Read codes",clearCodes:"Clear engine codes",disconnect:"Disconnect",clearResults:"Clear results",
+    clearConfirm1:"Clear stored engine/emissions trouble codes? This does not repair the fault and the warning light may return.",
+    clearConfirm2:"Confirm again: clear the stored engine/emissions codes now? Readiness monitors and freeze-frame data may also be reset.",
+    clearing:"Clearing stored engine/emissions codes…",clearSuccess:"Clear command sent. Reading codes again…",clearFailed:"Could not clear the codes.",
     noBluetooth:"This browser does not support Web Bluetooth. Use Android Chrome/Samsung Internet for the temporary web version.",
     noCodes:"No stored engine trouble codes were returned.",readFailed:"Could not read codes.",
     tapExplain:"Explanation",adapterUnsupported:"The adapter connected, but its BLE communication profile is not supported yet.",
@@ -298,7 +302,10 @@ const T = {
     disclaimer:"სიმპტომებით პასუხი აჩვენებს შესაძლო მიზეზებს და არა საბოლოო დიაგნოზს.",symLoaded:n=>`ჩატვირთულია ${n} სიმპტომის ჯგუფი`,
     obdPanel:"OBD2 კავშირი",obdSub:"დააკავშირეთ თავსებადი BLE OBD-II ადაპტერი და წაიკითხეთ შენახული შეცდომის კოდები.",
     notConnected:"არ არის დაკავშირებული",connecting:"დაკავშირება…",connected:n=>`დაკავშირებულია: ${n}`,disconnected:"კავშირი გაწყვეტილია",
-    connect:"OBD2 დაკავშირება",readCodes:"კოდების წაკითხვა",disconnect:"გათიშვა",clearResults:"შედეგების გასუფთავება",
+    connect:"OBD2 დაკავშირება",readCodes:"კოდების წაკითხვა",clearCodes:"ძრავის კოდების გასუფთავება",disconnect:"გათიშვა",clearResults:"შედეგების გასუფთავება",
+    clearConfirm1:"გსურთ შენახული ძრავის/ემისიების კოდების გასუფთავება? ეს დაზიანებას არ არემონტებს და Check Engine შეიძლება ისევ აინთოს.",
+    clearConfirm2:"კიდევ ერთხელ დაადასტურეთ: ნამდვილად გავასუფთაოთ შენახული ძრავის/ემისიების კოდები? readiness monitors და freeze-frame მონაცემებიც შეიძლება განულდეს.",
+    clearing:"ვაგზავნი კოდების გასუფთავების ბრძანებას…",clearSuccess:"გასუფთავების ბრძანება გაიგზავნა. კოდებს ხელახლა ვკითხულობ…",clearFailed:"კოდების გასუფთავება ვერ მოხერხდა.",
     noBluetooth:"ამ ბრაუზერს Web Bluetooth არ აქვს. დროებით Web ვერსიაში გამოიყენეთ Android Chrome ან Samsung Internet.",
     noCodes:"ძრავის შენახული შეცდომის კოდები არ დაბრუნდა.",readFailed:"კოდების წაკითხვა ვერ მოხერხდა.",
     tapExplain:"ახსნა",adapterUnsupported:"ადაპტერი დაუკავშირდა, მაგრამ მისი BLE საკომუნიკაციო პროფილი ჯერ არ არის მხარდაჭერილი.",
@@ -328,7 +335,10 @@ const T = {
     disclaimer:"Результат по симптомам показывает возможные причины, а не окончательный диагноз.",symLoaded:n=>`Загружено групп симптомов: ${n}`,
     obdPanel:"OBD2 подключение",obdSub:"Подключите совместимый BLE OBD-II адаптер и считайте сохранённые коды.",
     notConnected:"Не подключено",connecting:"Подключение…",connected:n=>`Подключено: ${n}`,disconnected:"Отключено",
-    connect:"Подключить OBD2",readCodes:"Считать коды",disconnect:"Отключить",clearResults:"Очистить результаты",
+    connect:"Подключить OBD2",readCodes:"Считать коды",clearCodes:"Очистить коды двигателя",disconnect:"Отключить",clearResults:"Очистить результаты",
+    clearConfirm1:"Очистить сохранённые коды двигателя/эмиссии? Это не устраняет неисправность, и Check Engine может загореться снова.",
+    clearConfirm2:"Подтвердите ещё раз: очистить коды двигателя/эмиссии сейчас? Readiness monitors и freeze-frame также могут сброситься.",
+    clearing:"Отправляю команду очистки кодов…",clearSuccess:"Команда очистки отправлена. Повторно считываю коды…",clearFailed:"Не удалось очистить коды.",
     noBluetooth:"Этот браузер не поддерживает Web Bluetooth. Для временной веб-версии используйте Android Chrome или Samsung Internet.",
     noCodes:"Сохранённые коды двигателя не получены.",readFailed:"Не удалось считать коды.",
     tapExplain:"Объяснение",adapterUnsupported:"Адаптер подключён, но его BLE-профиль пока не поддерживается.",
@@ -569,6 +579,7 @@ async function connectObd(){
     setObdStatus(tr().connected(obdDevice.name||"OBD2")+" • "+obdConnectedProfile,true);
     connectObdBtn.disabled=true;
     readCodesBtn.disabled=false;
+    clearCodesBtn.disabled=false;
     disconnectObdBtn.disabled=false;
 
     // Initialize ELM327-style adapter, read-only commands only.
@@ -594,6 +605,7 @@ function onObdDisconnected(){
   setObdStatus(tr().disconnected,false);
   connectObdBtn.disabled=false;
   readCodesBtn.disabled=true;
+  clearCodesBtn.disabled=true;
   disconnectObdBtn.disabled=true;
 }
 
@@ -754,6 +766,30 @@ async function readDtcCodes(){
   }
 }
 
+async function clearDtcCodes(){
+  if(!obdWriteChar)return;
+  const t=tr();
+  if(!confirm(t.clearConfirm1))return;
+  if(!confirm(t.clearConfirm2))return;
+
+  try{
+    setObdStatus(t.clearing,true);
+    // SAE J1979 Mode 04 clears stored emission-related DTCs and related diagnostic information.
+    // CarDoc intentionally does not send manufacturer-specific ABS, airbag, or other module clear commands here.
+    const raw=await sendObdCommand("04",3200);
+    const cleaned=cleanElmResponse(raw).toUpperCase();
+    if(cleaned.includes("?") || cleaned.includes("UNABLE TO CONNECT")){
+      throw new Error("Mode 04 rejected");
+    }
+    setObdStatus(t.clearSuccess,true);
+    await new Promise(r=>setTimeout(r,1200));
+    await readDtcCodes();
+  }catch(e){
+    console.error(e);
+    setObdStatus(t.clearFailed,false);
+  }
+}
+
 // LANGUAGE
 function applyLanguage(){
   const t=tr();
@@ -774,7 +810,7 @@ function applyLanguage(){
   analyzeSymptomsBtn.textContent=t.analyze;clearSymptomsBtn.textContent=t.clear;symptomDisclaimer.textContent=t.disclaimer;closeSymptomsBtn.textContent=t.close;
 
   obdPanelTitle.textContent=t.obdPanel;obdPanelSub.textContent=t.obdSub;
-  connectObdBtn.textContent=t.connect;readCodesBtn.textContent=t.readCodes;disconnectObdBtn.textContent=t.disconnect;clearObdResultsBtn.textContent=t.clearResults;
+  connectObdBtn.textContent=t.connect;readCodesBtn.textContent=t.readCodes;clearCodesBtn.textContent=t.clearCodes;disconnectObdBtn.textContent=t.disconnect;clearObdResultsBtn.textContent=t.clearResults;
   closeObdBtn.textContent=t.close;obdCompatNote.textContent=t.compat;
 
   if(!obdDevice || !obdDevice.gatt?.connected){

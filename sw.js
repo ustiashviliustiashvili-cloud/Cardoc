@@ -1,4 +1,4 @@
-const CACHE_NAME = "cardoc-v5";
+const CACHE_NAME = "cardoc-v6";
 const APP_ASSETS = [
   "./",
   "./index.html",
