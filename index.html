@@ -177,6 +177,7 @@
 
     <div class="obd-buttons">
       <button id="connectObdBtn" class="primary" onclick="connectObd()">Connect OBD2</button>
+      <button id="showAllBtBtn" class="secondary" onclick="connectObd(true)">Show all Bluetooth devices</button>
       <button id="readCodesBtn" class="secondary" onclick="readDtcCodes()" disabled>Read codes</button>
       <button id="clearCodesBtn" class="danger" onclick="clearDtcCodes()" disabled>Clear engine codes</button>
       <button id="disconnectObdBtn" class="secondary" onclick="disconnectObd()" disabled>Disconnect</button>
@@ -269,7 +270,7 @@ const T = {
     disclaimer:"Symptom results show possible causes, not a confirmed diagnosis.",symLoaded:n=>`${n} symptom groups loaded`,
     obdPanel:"OBD2 connection",obdSub:"Connect a compatible BLE OBD-II adapter, then read stored trouble codes.",
     notConnected:"Not connected",connecting:"Connecting…",connected:n=>`Connected: ${n}`,disconnected:"Disconnected",
-    connect:"Choose OBD2 device",readCodes:"Read codes",clearCodes:"Clear engine codes",disconnect:"Disconnect",clearResults:"Clear results",
+    connect:"Choose OBD2 device",showAllBt:"Show all Bluetooth devices",readCodes:"Read codes",clearCodes:"Clear engine codes",disconnect:"Disconnect",clearResults:"Clear results",
     clearConfirm1:"Clear stored engine/emissions trouble codes? This does not repair the fault and the warning light may return.",
     clearConfirm2:"Confirm again: clear the stored engine/emissions codes now? Readiness monitors and freeze-frame data may also be reset.",
     clearing:"Clearing stored engine/emissions codes…",clearSuccess:"Clear command sent. Reading codes again…",clearFailed:"Could not clear the codes.",
@@ -302,7 +303,7 @@ const T = {
     disclaimer:"სიმპტომებით პასუხი აჩვენებს შესაძლო მიზეზებს და არა საბოლოო დიაგნოზს.",symLoaded:n=>`ჩატვირთულია ${n} სიმპტომის ჯგუფი`,
     obdPanel:"OBD2 კავშირი",obdSub:"დააკავშირეთ თავსებადი BLE OBD-II ადაპტერი და წაიკითხეთ შენახული შეცდომის კოდები.",
     notConnected:"არ არის დაკავშირებული",connecting:"დაკავშირება…",connected:n=>`დაკავშირებულია: ${n}`,disconnected:"კავშირი გაწყვეტილია",
-    connect:"OBD2 მოწყობილობის არჩევა",readCodes:"კოდების წაკითხვა",clearCodes:"ძრავის კოდების გასუფთავება",disconnect:"გათიშვა",clearResults:"შედეგების გასუფთავება",
+    connect:"OBD2 მოწყობილობის არჩევა",showAllBt:"ყველა Bluetooth მოწყობილობა",readCodes:"კოდების წაკითხვა",clearCodes:"ძრავის კოდების გასუფთავება",disconnect:"გათიშვა",clearResults:"შედეგების გასუფთავება",
     clearConfirm1:"გსურთ შენახული ძრავის/ემისიების კოდების გასუფთავება? ეს დაზიანებას არ არემონტებს და Check Engine შეიძლება ისევ აინთოს.",
     clearConfirm2:"კიდევ ერთხელ დაადასტურეთ: ნამდვილად გავასუფთაოთ შენახული ძრავის/ემისიების კოდები? readiness monitors და freeze-frame მონაცემებიც შეიძლება განულდეს.",
     clearing:"ვაგზავნი კოდების გასუფთავების ბრძანებას…",clearSuccess:"გასუფთავების ბრძანება გაიგზავნა. კოდებს ხელახლა ვკითხულობ…",clearFailed:"კოდების გასუფთავება ვერ მოხერხდა.",
@@ -335,7 +336,7 @@ const T = {
     disclaimer:"Результат по симптомам показывает возможные причины, а не окончательный диагноз.",symLoaded:n=>`Загружено групп симптомов: ${n}`,
     obdPanel:"OBD2 подключение",obdSub:"Подключите совместимый BLE OBD-II адаптер и считайте сохранённые коды.",
     notConnected:"Не подключено",connecting:"Подключение…",connected:n=>`Подключено: ${n}`,disconnected:"Отключено",
-    connect:"Выбрать OBD2 устройство",readCodes:"Считать коды",clearCodes:"Очистить коды двигателя",disconnect:"Отключить",clearResults:"Очистить результаты",
+    connect:"Выбрать OBD2 устройство",showAllBt:"Показать все Bluetooth устройства",readCodes:"Считать коды",clearCodes:"Очистить коды двигателя",disconnect:"Отключить",clearResults:"Очистить результаты",
     clearConfirm1:"Очистить сохранённые коды двигателя/эмиссии? Это не устраняет неисправность, и Check Engine может загореться снова.",
     clearConfirm2:"Подтвердите ещё раз: очистить коды двигателя/эмиссии сейчас? Readiness monitors и freeze-frame также могут сброситься.",
     clearing:"Отправляю команду очистки кодов…",clearSuccess:"Команда очистки отправлена. Повторно считываю коды…",clearFailed:"Не удалось очистить коды.",
@@ -516,7 +517,7 @@ async function openObdAndConnect(){
   // One user tap opens the browser's native Bluetooth device picker.
   // The user manually chooses their OBD2 adapter.
   if(!obdDevice || !obdDevice.gatt || !obdDevice.gatt.connected){
-    await connectObd();
+    await connectObd(false);
   }
 }
 
@@ -537,7 +538,7 @@ function clearObdResults(){
   obdLog.classList.add("hidden");
 }
 
-async function connectObd(){
+async function connectObd(showAll=false){
   if(!("bluetooth" in navigator)){
     setObdStatus(tr().noBluetooth,false);
     return;
@@ -549,10 +550,31 @@ async function connectObd(){
 
     const optionalServices = [...new Set(OBD_PROFILES.map(p=>p.service))];
 
-    obdDevice = await navigator.bluetooth.requestDevice({
-      acceptAllDevices: true,
-      optionalServices
-    });
+    // Default chooser is filtered to common OBD-II BLE adapter names.
+    // A separate fallback button can still show every BLE device.
+    const obdNameFilters = [
+      {namePrefix:"OBD"},
+      {namePrefix:"ELM"},
+      {namePrefix:"V-LINK"},
+      {namePrefix:"VLink"},
+      {namePrefix:"Vgate"},
+      {namePrefix:"VGATE"},
+      {namePrefix:"VEEPEAK"},
+      {namePrefix:"Viecar"},
+      {namePrefix:"VIECAR"},
+      {namePrefix:"iCar"},
+      {namePrefix:"ICAR"},
+      {namePrefix:"Carista"},
+      {namePrefix:"KONNWEI"},
+      {namePrefix:"LELink"},
+      {namePrefix:"BAFX"}
+    ];
+
+    obdDevice = await navigator.bluetooth.requestDevice(
+      showAll
+        ? {acceptAllDevices:true, optionalServices}
+        : {filters:obdNameFilters, optionalServices}
+    );
 
     obdDevice.addEventListener("gattserverdisconnected", onObdDisconnected);
     obdServer = await obdDevice.gatt.connect();
@@ -823,7 +845,7 @@ function applyLanguage(){
   analyzeSymptomsBtn.textContent=t.analyze;clearSymptomsBtn.textContent=t.clear;symptomDisclaimer.textContent=t.disclaimer;closeSymptomsBtn.textContent=t.close;
 
   obdPanelTitle.textContent=t.obdPanel;obdPanelSub.textContent=t.obdSub;
-  connectObdBtn.textContent=t.connect;readCodesBtn.textContent=t.readCodes;clearCodesBtn.textContent=t.clearCodes;disconnectObdBtn.textContent=t.disconnect;clearObdResultsBtn.textContent=t.clearResults;
+  connectObdBtn.textContent=t.connect;showAllBtBtn.textContent=t.showAllBt;readCodesBtn.textContent=t.readCodes;clearCodesBtn.textContent=t.clearCodes;disconnectObdBtn.textContent=t.disconnect;clearObdResultsBtn.textContent=t.clearResults;
   closeObdBtn.textContent=t.close;obdCompatNote.textContent=t.compat;
 
   if(!obdDevice || !obdDevice.gatt?.connected){
