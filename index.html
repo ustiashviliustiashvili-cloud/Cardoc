@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarDoc</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #08111f;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .app {
+      max-width: 500px;
+      margin: auto;
+      padding: 24px 18px;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #43a5ff;
+    }
+
+    select {
+      background: #152238;
+      color: white;
+      border: 1px solid #29405e;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #10223d, #0b1729);
+      border: 1px solid #1f3857;
+      border-radius: 22px;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #a7b6c9;
+      line-height: 1.5;
+    }
+
+    .search-box {
+      margin-top: 22px;
+      display: flex;
+      gap: 8px;
+    }
+
+    input {
+      flex: 1;
+      background: #08111f;
+      border: 1px solid #355272;
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    button {
+      background: #168cff;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 0 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      background: #111e31;
+      border: 1px solid #203853;
+      border-radius: 18px;
+      padding: 20px 15px;
+      min-height: 125px;
+    }
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 13px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      color: #8192a8;
+      font-size: 13px;
+    }
+
+    #result {
+      display: none;
+      margin-top: 22px;
+      background: #101e31;
+      border: 1px solid #2d4e70;
+      padding: 20px;
+      border-radius: 18px;
+    }
+
+    #result h2 {
+      color: #43a5ff;
+      margin-bottom: 10px;
+    }
+
+    #result p {
+      margin: 8px 0;
+      line-height: 1.5;
+      color: #c9d5e3;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      background: #573514;
+      color: #ffba5c;
+      padding: 7px 11px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="top">
+    <div class="logo">CarDoc</div>
+
+    <select id="language">
+      <option value="en">English</option>
+      <option value="ka">ქართული</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
+
+  <div class="hero">
+
+    <h1 id="title">What's wrong with your car?</h1>
+
+    <p id="subtitle">
+      Enter an OBD trouble code and CarDoc will explain the problem.
+    </p>
+
+    <div class="search-box">
+      <input
+        id="codeInput"
+        placeholder="Example: P0301"
+        maxlength="5"
+      >
+
+      <button onclick="diagnose()">Scan</button>
+    </div>
+
+  </div>
+
+  <div class="menu">
+
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3>My Garage</h3>
+      <p>Save your cars</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>Symptoms</h3>
+      <p>Describe the problem</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📋</div>
+      <h3>History</h3>
+      <p>Previous diagnostics</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔧</div>
+      <h3>Maintenance</h3>
+      <p>Service reminders</p>
+    </div>
+
+  </div>
+
+  <div id="result">
+    <h2 id="resultCode"></h2>
+    <p id="resultTitle"></p>
+    <p id="resultCause"></p>
+    <span class="badge" id="severity"></span>
+  </div>
+
+</div>
+
+<script>
+
+const codes = {
+
+  P0300: {
+    title: "Random / Multiple Cylinder Misfire",
+    cause: "Possible causes: spark plugs, ignition coils, injectors, fuel pressure or vacuum leak.",
+    severity: "Needs attention"
+  },
+
+  P0301: {
+    title: "Cylinder 1 Misfire Detected",
+    cause: "Possible causes: spark plug, ignition coil, injector, compression problem or air leak.",
+    severity: "Needs attention"
+  },
+
+  P0420: {
+    title: "Catalyst System Efficiency Below Threshold",
+    cause: "Possible causes: catalytic converter, oxygen sensor, exhaust leak or engine running problem.",
+    severity: "Check soon"
+  },
+
+  P0171: {
+    title: "System Too Lean – Bank 1",
+    cause: "Possible causes: vacuum leak, MAF sensor, fuel pressure or injector problem.",
+    severity: "Check soon"
+  },
+
+  P0455: {
+    title: "Large EVAP System Leak Detected",
+    cause: "Possible causes: loose fuel cap, damaged EVAP hose, purge valve or leak in the fuel vapor system.",
+    severity: "Usually not urgent"
+  }
+
+};
+
+function diagnose() {
+
+  const input =
+    document.getElementById("codeInput")
+    .value
+    .trim()
+    .toUpperCase();
+
+  const result = document.getElementById("result");
+
+  if (!input) {
+    alert("Enter an OBD code");
+    return;
+  }
+
+  if (codes[input]) {
+
+    document.getElementById("resultCode").innerText = input;
+    document.getElementById("resultTitle").innerText =
+      codes[input].title;
+
+    document.getElementById("resultCause").innerText =
+      codes[input].cause;
+
+    document.getElementById("severity").innerText =
+      codes[input].severity;
+
+  } else {
+
+    document.getElementById("resultCode").innerText = input;
+
+    document.getElementById("resultTitle").innerText =
+      "Code not found yet.";
+
+    document.getElementById("resultCause").innerText =
+      "CarDoc database will be expanded with thousands of OBD-II codes.";
+
+    document.getElementById("severity").innerText =
+      "Unknown";
+
+  }
+
+  result.style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
