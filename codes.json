@@ -1,0 +1,5223 @@
+{
+  "meta": {
+    "name": "CarDoc OBD-II Generic Codes",
+    "version": "1.0",
+    "languages": [
+      "en",
+      "ka",
+      "ru"
+    ],
+    "code_count": 159,
+    "note": "Starter database of common generic OBD-II powertrain codes. Manufacturer-specific codes should be stored separately."
+  },
+  "codes": {
+    "P0001": {
+      "category": "Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Volume Regulator Control Circuit Open",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მოცულობის რეგულატორის მართვის წრედი გაწყვეტილია",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обрыв цепи управления регулятором объёма топлива",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0002": {
+      "category": "Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Volume Regulator Control Circuit Range/Performance",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მოცულობის რეგულატორის წრედის დიაპაზონი/მუშაობა",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа цепи регулятора объёма топлива",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0003": {
+      "category": "Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Volume Regulator Control Circuit Low",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მოცულობის რეგულატორის მართვის წრედი — დაბალი სიგნალი",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Низкий уровень цепи управления регулятором объёма топлива",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0004": {
+      "category": "Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Volume Regulator Control Circuit High",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მოცულობის რეგულატორის მართვის წრედი — მაღალი სიგნალი",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Высокий уровень цепи управления регулятором объёма топлива",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0010": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Position Actuator Circuit – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის აქტუატორის წრედი — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь привода впускного распредвала — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0011": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Timing Over-Advanced – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის ფაზა ზედმეტად წინ არის — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза впускного распредвала слишком ранняя — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0012": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Timing Over-Retarded – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის ფაზა ზედმეტად გვიან არის — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза впускного распредвала слишком поздняя — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0013": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Position Actuator Circuit – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის აქტუატორის წრედი — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь привода выпускного распредвала — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0014": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Timing Over-Advanced – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის ფაზა ზედმეტად წინ არის — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза выпускного распредвала слишком ранняя — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0015": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Timing Over-Retarded – Bank 1",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის ფაზა ზედმეტად გვიან არის — Bank 1",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза выпускного распредвала слишком поздняя — Bank 1",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0016": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Crankshaft/Camshaft Position Correlation – Bank 1 Sensor A",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "კრანკშაფტის/კამშაფტის პოზიციების შეუსაბამობა — Bank 1 Sensor A",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Несоответствие положения коленвала/распредвала — Bank 1 Sensor A",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0017": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Crankshaft/Camshaft Position Correlation – Bank 1 Sensor B",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "კრანკშაფტის/კამშაფტის პოზიციების შეუსაბამობა — Bank 1 Sensor B",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Несоответствие положения коленвала/распредвала — Bank 1 Sensor B",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0020": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Position Actuator Circuit – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის აქტუატორის წრედი — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь привода впускного распредвала — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0021": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Timing Over-Advanced – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის ფაზა ზედმეტად წინ არის — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза впускного распредвала слишком ранняя — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0022": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Intake Camshaft Timing Over-Retarded – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები გამანაწილებელი ლილვის ფაზა ზედმეტად გვიან არის — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза впускного распредвала слишком поздняя — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0023": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Position Actuator Circuit – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის აქტუატორის წრედი — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь привода выпускного распредвала — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0024": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Timing Over-Advanced – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის ფაზა ზედმეტად წინ არის — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза выпускного распредвала слишком ранняя — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0025": {
+      "category": "Timing/VVT",
+      "severity": "high",
+      "en": {
+        "title": "Exhaust Camshaft Timing Over-Retarded – Bank 2",
+        "causes": [
+          "Oil level/quality problem",
+          "VVT solenoid fault",
+          "Camshaft actuator issue",
+          "Timing chain/belt problem",
+          "Wiring fault"
+        ]
+      },
+      "ka": {
+        "title": "გამონაბოლქვის გამანაწილებელი ლილვის ფაზა ზედმეტად გვიან არის — Bank 2",
+        "causes": [
+          "ზეთის დონის ან ხარისხის პრობლემა",
+          "VVT სოლენოიდის პრობლემა",
+          "ფაზარეგულატორის პრობლემა",
+          "ჯაჭვის/რემენის დროის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Фаза выпускного распредвала слишком поздняя — Bank 2",
+        "causes": [
+          "Проблема уровня/качества масла",
+          "Неисправность соленоида VVT",
+          "Неисправность фазорегулятора",
+          "Проблема цепи/ремня ГРМ",
+          "Проводка"
+        ]
+      }
+    },
+    "P0030": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის მართვის წრედი — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления нагревателем O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0031": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit Low – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი დაბალია — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Низкий уровень цепи нагревателя O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0032": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit High – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი მაღალია — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Высокий уровень цепи нагревателя O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0036": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit – Bank 1 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის მართვის წრედი — Bank 1 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления нагревателем O2 — Bank 1 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0050": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit – Bank 2 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის მართვის წრედი — Bank 2 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления нагревателем O2 — Bank 2 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0056": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "Heated Oxygen Sensor Heater Control Circuit – Bank 2 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის მართვის წრედი — Bank 2 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления нагревателем O2 — Bank 2 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0068": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAP/MAF – Throttle Position Correlation",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAP/MAF და დროსელის პოზიციის შეუსაბამობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Несоответствие MAP/MAF и положения дросселя",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0070": {
+      "category": "Air/Fuel",
+      "severity": "low",
+      "en": {
+        "title": "Ambient Air Temperature Sensor Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "გარემოს ჰაერის ტემპერატურის სენსორის წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика температуры наружного воздуха",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0087": {
+      "category": "Air/Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Rail/System Pressure Too Low",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მაგისტრალში წნევა ძალიან დაბალია",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Слишком низкое давление в топливной рампе",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0088": {
+      "category": "Air/Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Rail/System Pressure Too High",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის მაგისტრალში წნევა ძალიან მაღალია",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Слишком высокое давление в топливной рампе",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0090": {
+      "category": "Air/Fuel",
+      "severity": "high",
+      "en": {
+        "title": "Fuel Pressure Regulator 1 Control Circuit",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "საწვავის წნევის რეგულატორი 1 — მართვის წრედი",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления регулятором давления топлива 1",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0100": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Mass or Volume Air Flow Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAF ჰაერის მასის/მოცულობის სენსორის წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика массового расхода воздуха",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0101": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAF Circuit Range/Performance",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAF სენსორის დიაპაზონი/მუშაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика MAF",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0102": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAF Circuit Low Input",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAF სენსორის დაბალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Низкий сигнал датчика MAF",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0103": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAF Circuit High Input",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAF სენსორის მაღალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Высокий сигнал датчика MAF",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0105": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAP/Barometric Pressure Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAP/ბარომეტრული წნევის სენსორის წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика MAP/барометрического давления",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0106": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "MAP/Barometric Pressure Circuit Range/Performance",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "MAP/ბარომეტრული წნევის სენსორის დიაპაზონი/მუშაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа MAP/барометрического датчика",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0110": {
+      "category": "Air/Fuel",
+      "severity": "low",
+      "en": {
+        "title": "Intake Air Temperature Sensor 1 Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები ჰაერის ტემპერატურის სენსორი 1 — წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика температуры впускного воздуха 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0112": {
+      "category": "Air/Fuel",
+      "severity": "low",
+      "en": {
+        "title": "Intake Air Temperature Sensor 1 Circuit Low",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები ჰაერის ტემპერატურის სენსორი 1 — დაბალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Низкий сигнал датчика температуры впускного воздуха 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0113": {
+      "category": "Air/Fuel",
+      "severity": "low",
+      "en": {
+        "title": "Intake Air Temperature Sensor 1 Circuit High",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "შემშვები ჰაერის ტემპერატურის სენსორი 1 — მაღალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Высокий сигнал датчика температуры впускного воздуха 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0115": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Engine Coolant Temperature Sensor 1 Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "ძრავის გამაგრილებლის ტემპერატურის სენსორი 1 — წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика температуры охлаждающей жидкости 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0116": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Engine Coolant Temperature Sensor 1 Range/Performance",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "გამაგრილებლის ტემპერატურის სენსორი 1 — დიაპაზონი/მუშაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика температуры ОЖ 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0117": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Engine Coolant Temperature Sensor 1 Circuit Low",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "გამაგრილებლის ტემპერატურის სენსორი 1 — დაბალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Низкий сигнал датчика температуры ОЖ 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0118": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Engine Coolant Temperature Sensor 1 Circuit High",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "გამაგრილებლის ტემპერატურის სენსორი 1 — მაღალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Высокий сигнал датчика температуры ОЖ 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0120": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Throttle/Pedal Position Sensor A Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დროსელის/პედლის პოზიციის სენსორი A — წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика положения дросселя/педали A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0121": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Throttle/Pedal Position Sensor A Range/Performance",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დროსელის/პედლის პოზიციის სენსორი A — დიაპაზონი/მუშაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика дросселя/педали A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0122": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Throttle/Pedal Position Sensor A Circuit Low",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დროსელის/პედლის პოზიციის სენსორი A — დაბალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Низкий сигнал датчика дросселя/педали A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0123": {
+      "category": "Air/Fuel",
+      "severity": "medium",
+      "en": {
+        "title": "Throttle/Pedal Position Sensor A Circuit High",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დროსელის/პედლის პოზიციის სენსორი A — მაღალი სიგნალი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Высокий сигнал датчика дросселя/педали A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0130": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის წრედი — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0131": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit Low Voltage – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის დაბალი ძაბვა — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Низкое напряжение датчика O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0132": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit High Voltage – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის მაღალი ძაბვა — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Высокое напряжение датчика O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0133": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit Slow Response – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის ნელი რეაგირება — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Медленный отклик датчика O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0134": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit No Activity – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის აქტივობა არ არის — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Нет активности датчика O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0135": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Heater Circuit – Bank 1 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი — Bank 1 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь нагревателя O2 — Bank 1 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0136": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit – Bank 1 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის წრედი — Bank 1 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика O2 — Bank 1 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0141": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Heater Circuit – Bank 1 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი — Bank 1 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь нагревателя O2 — Bank 1 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0150": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit – Bank 2 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის წრედი — Bank 2 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика O2 — Bank 2 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0155": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Heater Circuit – Bank 2 Sensor 1",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი — Bank 2 Sensor 1",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь нагревателя O2 — Bank 2 Sensor 1",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0156": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Circuit – Bank 2 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის წრედი — Bank 2 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика O2 — Bank 2 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0161": {
+      "category": "Oxygen Sensor",
+      "severity": "medium",
+      "en": {
+        "title": "O2 Sensor Heater Circuit – Bank 2 Sensor 2",
+        "causes": [
+          "Oxygen sensor fault",
+          "Heater circuit fault",
+          "Exhaust leak",
+          "Wiring or connector issue",
+          "Fuel mixture problem"
+        ]
+      },
+      "ka": {
+        "title": "O2 სენსორის გამათბობლის წრედი — Bank 2 Sensor 2",
+        "causes": [
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამათბობლის წრედის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "საწვავის ნარევის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь нагревателя O2 — Bank 2 Sensor 2",
+        "causes": [
+          "Неисправность датчика кислорода",
+          "Неисправность цепи нагревателя",
+          "Утечка выхлопа",
+          "Проводка или разъём",
+          "Проблема топливной смеси"
+        ]
+      }
+    },
+    "P0171": {
+      "category": "Fuel Trim",
+      "severity": "medium",
+      "en": {
+        "title": "System Too Lean – Bank 1",
+        "causes": [
+          "Vacuum leak",
+          "MAF sensor contamination",
+          "Low fuel pressure",
+          "Injector restriction",
+          "Exhaust leak before O2 sensor"
+        ]
+      },
+      "ka": {
+        "title": "ღარიბი ნარევი — Bank 1",
+        "causes": [
+          "ვაკუუმის გაჟონვა",
+          "MAF სენსორის დაბინძურება",
+          "დაბალი საწვავის წნევა",
+          "ინჟექტორის შეზღუდვა/დაბინძურება",
+          "გამონაბოლქვის გაჟონვა O2 სენსორამდე"
+        ]
+      },
+      "ru": {
+        "title": "Слишком бедная смесь — Bank 1",
+        "causes": [
+          "Подсос воздуха",
+          "Загрязнение MAF",
+          "Низкое давление топлива",
+          "Засор форсунки",
+          "Утечка выхлопа до O2"
+        ]
+      }
+    },
+    "P0172": {
+      "category": "Fuel Trim",
+      "severity": "medium",
+      "en": {
+        "title": "System Too Rich – Bank 1",
+        "causes": [
+          "Leaking injector",
+          "High fuel pressure",
+          "MAF/O2 sensor fault",
+          "Restricted air intake",
+          "EVAP purge fault"
+        ]
+      },
+      "ka": {
+        "title": "მდიდარი ნარევი — Bank 1",
+        "causes": [
+          "ინჟექტორის გაჟონვა",
+          "მაღალი საწვავის წნევა",
+          "MAF/O2 სენსორის პრობლემა",
+          "ჰაერის შემშვების შეზღუდვა",
+          "EVAP purge-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Слишком богатая смесь — Bank 1",
+        "causes": [
+          "Подтекающая форсунка",
+          "Высокое давление топлива",
+          "Неисправность MAF/O2",
+          "Ограничение впуска",
+          "Неисправность продувки EVAP"
+        ]
+      }
+    },
+    "P0174": {
+      "category": "Fuel Trim",
+      "severity": "medium",
+      "en": {
+        "title": "System Too Lean – Bank 2",
+        "causes": [
+          "Vacuum leak",
+          "MAF sensor contamination",
+          "Low fuel pressure",
+          "Injector restriction",
+          "Exhaust leak before O2 sensor"
+        ]
+      },
+      "ka": {
+        "title": "ღარიბი ნარევი — Bank 2",
+        "causes": [
+          "ვაკუუმის გაჟონვა",
+          "MAF სენსორის დაბინძურება",
+          "დაბალი საწვავის წნევა",
+          "ინჟექტორის შეზღუდვა/დაბინძურება",
+          "გამონაბოლქვის გაჟონვა O2 სენსორამდე"
+        ]
+      },
+      "ru": {
+        "title": "Слишком бедная смесь — Bank 2",
+        "causes": [
+          "Подсос воздуха",
+          "Загрязнение MAF",
+          "Низкое давление топлива",
+          "Засор форсунки",
+          "Утечка выхлопа до O2"
+        ]
+      }
+    },
+    "P0175": {
+      "category": "Fuel Trim",
+      "severity": "medium",
+      "en": {
+        "title": "System Too Rich – Bank 2",
+        "causes": [
+          "Leaking injector",
+          "High fuel pressure",
+          "MAF/O2 sensor fault",
+          "Restricted air intake",
+          "EVAP purge fault"
+        ]
+      },
+      "ka": {
+        "title": "მდიდარი ნარევი — Bank 2",
+        "causes": [
+          "ინჟექტორის გაჟონვა",
+          "მაღალი საწვავის წნევა",
+          "MAF/O2 სენსორის პრობლემა",
+          "ჰაერის შემშვების შეზღუდვა",
+          "EVAP purge-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Слишком богатая смесь — Bank 2",
+        "causes": [
+          "Подтекающая форсунка",
+          "Высокое давление топлива",
+          "Неисправность MAF/O2",
+          "Ограничение впуска",
+          "Неисправность продувки EVAP"
+        ]
+      }
+    },
+    "P0201": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 1",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 1",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 1",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0202": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 2",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 2",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 2",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0203": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 3",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 3",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 3",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0204": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 4",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 4",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 4",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0205": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 5",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 5",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 5",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0206": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 6",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 6",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 6",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0207": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 7",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 7",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 7",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0208": {
+      "category": "Injector",
+      "severity": "high",
+      "en": {
+        "title": "Injector Circuit Malfunction – Cylinder 8",
+        "causes": [
+          "Low fuel pressure",
+          "Fuel pump issue",
+          "Clogged filter",
+          "Injector fault",
+          "Wiring problem"
+        ]
+      },
+      "ka": {
+        "title": "ინჟექტორის წრედის გაუმართაობა — ცილინდრი 8",
+        "causes": [
+          "დაბალი საწვავის წნევა",
+          "საწვავის ტუმბოს პრობლემა",
+          "დახშული ფილტრი",
+          "ინჟექტორის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи форсунки — цилиндр 8",
+        "causes": [
+          "Низкое давление топлива",
+          "Неисправность топливного насоса",
+          "Забитый фильтр",
+          "Неисправность форсунки",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0217": {
+      "category": "Cooling",
+      "severity": "critical",
+      "en": {
+        "title": "Engine Overtemperature Condition",
+        "causes": [
+          "Low coolant",
+          "Cooling fan fault",
+          "Thermostat fault",
+          "Water pump problem",
+          "Coolant leak"
+        ]
+      },
+      "ka": {
+        "title": "ძრავის გადახურება",
+        "causes": [
+          "ანტიფრიზის დაბალი დონე",
+          "ვენტილატორის პრობლემა",
+          "თერმოსტატის პრობლემა",
+          "წყლის ტუმბოს პრობლემა",
+          "გაგრილების სისტემის გაჟონვა"
+        ]
+      },
+      "ru": {
+        "title": "Перегрев двигателя",
+        "causes": [
+          "Низкий уровень ОЖ",
+          "Неисправность вентилятора",
+          "Неисправность термостата",
+          "Неисправность помпы",
+          "Утечка охлаждающей жидкости"
+        ]
+      }
+    },
+    "P0234": {
+      "category": "Turbo",
+      "severity": "high",
+      "en": {
+        "title": "Turbocharger/Supercharger Overboost Condition",
+        "causes": [
+          "Boost leak",
+          "Turbocharger/wastegate fault",
+          "Boost control solenoid fault",
+          "MAP/boost sensor issue",
+          "Exhaust restriction"
+        ]
+      },
+      "ka": {
+        "title": "ტურბოს ზედმეტი წნევა",
+        "causes": [
+          "ბუსტის გაჟონვა",
+          "ტურბინის/wastegate-ის პრობლემა",
+          "ბუსტის სოლენოიდის პრობლემა",
+          "MAP/boost სენსორის პრობლემა",
+          "გამონაბოლქვის შეზღუდვა"
+        ]
+      },
+      "ru": {
+        "title": "Слишком высокое давление наддува",
+        "causes": [
+          "Утечка наддува",
+          "Неисправность турбины/wastegate",
+          "Неисправность соленоида наддува",
+          "Проблема MAP/boost датчика",
+          "Ограничение выхлопа"
+        ]
+      }
+    },
+    "P0299": {
+      "category": "Turbo",
+      "severity": "high",
+      "en": {
+        "title": "Turbocharger/Supercharger Underboost Condition",
+        "causes": [
+          "Boost leak",
+          "Turbocharger/wastegate fault",
+          "Boost control solenoid fault",
+          "MAP/boost sensor issue",
+          "Exhaust restriction"
+        ]
+      },
+      "ka": {
+        "title": "ტურბოს არასაკმარისი წნევა",
+        "causes": [
+          "ბუსტის გაჟონვა",
+          "ტურბინის/wastegate-ის პრობლემა",
+          "ბუსტის სოლენოიდის პრობლემა",
+          "MAP/boost სენსორის პრობლემა",
+          "გამონაბოლქვის შეზღუდვა"
+        ]
+      },
+      "ru": {
+        "title": "Недостаточное давление наддува",
+        "causes": [
+          "Утечка наддува",
+          "Неисправность турбины/wastegate",
+          "Неисправность соленоида наддува",
+          "Проблема MAP/boost датчика",
+          "Ограничение выхлопа"
+        ]
+      }
+    },
+    "P0300": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Random/Multiple Cylinder Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "შემთხვევითი/რამდენიმე ცილინდრის ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Случайные/множественные пропуски зажигания",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0301": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 1 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 1 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 1",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0302": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 2 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 2 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 2",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0303": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 3 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 3 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 3",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0304": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 4 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 4 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 4",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0305": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 5 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 5 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 5",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0306": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 6 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 6 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 6",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0307": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 7 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 7 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 7",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0308": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 8 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 8 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 8",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0309": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 9 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 9 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 9",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0310": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 10 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 10 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 10",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0311": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 11 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 11 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 11",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0312": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Cylinder 12 Misfire Detected",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "ცილინდრი 12 — ანთების გამოტოვება",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания в цилиндре 12",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0316": {
+      "category": "Misfire",
+      "severity": "high",
+      "en": {
+        "title": "Misfire Detected on Startup (First 1000 Revolutions)",
+        "causes": [
+          "Worn spark plug",
+          "Ignition coil fault",
+          "Injector issue",
+          "Vacuum leak",
+          "Low compression"
+        ]
+      },
+      "ka": {
+        "title": "დაქოქვის შემდეგ ანთების გამოტოვება (პირველი 1000 ბრუნი)",
+        "causes": [
+          "გაცვეთილი სანთელი",
+          "ანთების კოჭის პრობლემა",
+          "ინჟექტორის პრობლემა",
+          "ჰაერის გაჟონვა",
+          "დაბალი კომპრესია"
+        ]
+      },
+      "ru": {
+        "title": "Пропуски зажигания при запуске (первые 1000 оборотов)",
+        "causes": [
+          "Изношенная свеча",
+          "Неисправность катушки зажигания",
+          "Проблема форсунки",
+          "Подсос воздуха",
+          "Низкая компрессия"
+        ]
+      }
+    },
+    "P0325": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Knock Sensor 1 Circuit – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დეტონაციის სენსორი 1 — წრედი, Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика детонации 1 — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0327": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Knock Sensor 1 Circuit Low – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დეტონაციის სენსორი 1 — დაბალი სიგნალი, Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Низкий сигнал датчика детонации 1 — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0328": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Knock Sensor 1 Circuit High – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "დეტონაციის სენსორი 1 — მაღალი სიგნალი, Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Высокий сигнал датчика детонации 1 — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0335": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Crankshaft Position Sensor A Circuit",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "კრანკშაფტის პოზიციის სენსორი A — წრედი",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика положения коленвала A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0336": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Crankshaft Position Sensor A Range/Performance",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "კრანკშაფტის პოზიციის სენსორი A — დიაპაზონი/მუშაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика коленвала A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0340": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Camshaft Position Sensor A Circuit – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "კამშაფტის პოზიციის სენსორი A — Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика положения распредвала A — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0341": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Camshaft Position Sensor A Range/Performance – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "კამშაფტის პოზიციის სენსორი A — დიაპაზონი/მუშაობა, Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика распредвала A — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0351": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil A Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა A — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания A — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0352": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil B Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა B — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания B — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0353": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil C Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა C — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания C — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0354": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil D Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა D — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания D — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0355": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil E Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა E — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания E — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0356": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil F Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა F — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания F — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0357": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil G Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა G — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания G — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0358": {
+      "category": "Ignition",
+      "severity": "high",
+      "en": {
+        "title": "Ignition Coil H Primary/Secondary Circuit",
+        "causes": [
+          "Ignition coil fault",
+          "Wiring or connector problem",
+          "Spark plug issue",
+          "ECM driver fault"
+        ]
+      },
+      "ka": {
+        "title": "ანთების კოჭა H — პირველადი/მეორადი წრედი",
+        "causes": [
+          "ანთების კოჭის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "სანთლის პრობლემა",
+          "ECM-ის მართვის არხის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Катушка зажигания H — первичная/вторичная цепь",
+        "causes": [
+          "Неисправность катушки",
+          "Проводка или разъём",
+          "Проблема свечи",
+          "Неисправность драйвера ECM"
+        ]
+      }
+    },
+    "P0365": {
+      "category": "Engine Position Sensor",
+      "severity": "high",
+      "en": {
+        "title": "Camshaft Position Sensor B Circuit – Bank 1",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "კამშაფტის პოზიციის სენსორი B — Bank 1",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика положения распредвала B — Bank 1",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0380": {
+      "category": "Diesel",
+      "severity": "medium",
+      "en": {
+        "title": "Glow Plug/Heater Circuit A",
+        "causes": [
+          "Glow plug fault",
+          "Glow plug relay/module fault",
+          "Wiring issue"
+        ]
+      },
+      "ka": {
+        "title": "ნათების სანთლების/გამათბობლის წრედი A",
+        "causes": [
+          "ნათების სანთლის პრობლემა",
+          "რელეს/მოდულის პრობლემა",
+          "გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь свечей накала/нагревателя A",
+        "causes": [
+          "Неисправность свечи накала",
+          "Неисправность реле/модуля",
+          "Проблема проводки"
+        ]
+      }
+    },
+    "P0400": {
+      "category": "EGR",
+      "severity": "medium",
+      "en": {
+        "title": "Exhaust Gas Recirculation Flow Malfunction",
+        "causes": [
+          "EGR valve stuck or clogged",
+          "Blocked EGR passages",
+          "Wiring fault",
+          "DPFE/EGR sensor issue"
+        ]
+      },
+      "ka": {
+        "title": "EGR ნაკადის გაუმართაობა",
+        "causes": [
+          "EGR სარქველი გაჭედილია ან დაბინძურებულია",
+          "EGR არხები დახშულია",
+          "გაყვანილობის პრობლემა",
+          "EGR/DPFE სენსორის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность потока EGR",
+        "causes": [
+          "Клапан EGR заклинил или загрязнён",
+          "Засорены каналы EGR",
+          "Проблема проводки",
+          "Неисправность датчика EGR/DPFE"
+        ]
+      }
+    },
+    "P0401": {
+      "category": "EGR",
+      "severity": "medium",
+      "en": {
+        "title": "EGR Flow Insufficient",
+        "causes": [
+          "EGR valve stuck or clogged",
+          "Blocked EGR passages",
+          "Wiring fault",
+          "DPFE/EGR sensor issue"
+        ]
+      },
+      "ka": {
+        "title": "EGR ნაკადი არასაკმარისია",
+        "causes": [
+          "EGR სარქველი გაჭედილია ან დაბინძურებულია",
+          "EGR არხები დახშულია",
+          "გაყვანილობის პრობლემა",
+          "EGR/DPFE სენსორის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Недостаточный поток EGR",
+        "causes": [
+          "Клапан EGR заклинил или загрязнён",
+          "Засорены каналы EGR",
+          "Проблема проводки",
+          "Неисправность датчика EGR/DPFE"
+        ]
+      }
+    },
+    "P0402": {
+      "category": "EGR",
+      "severity": "medium",
+      "en": {
+        "title": "EGR Flow Excessive",
+        "causes": [
+          "EGR valve stuck or clogged",
+          "Blocked EGR passages",
+          "Wiring fault",
+          "DPFE/EGR sensor issue"
+        ]
+      },
+      "ka": {
+        "title": "EGR ნაკადი ზედმეტია",
+        "causes": [
+          "EGR სარქველი გაჭედილია ან დაბინძურებულია",
+          "EGR არხები დახშულია",
+          "გაყვანილობის პრობლემა",
+          "EGR/DPFE სენსორის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Чрезмерный поток EGR",
+        "causes": [
+          "Клапан EGR заклинил или загрязнён",
+          "Засорены каналы EGR",
+          "Проблема проводки",
+          "Неисправность датчика EGR/DPFE"
+        ]
+      }
+    },
+    "P0403": {
+      "category": "EGR",
+      "severity": "medium",
+      "en": {
+        "title": "EGR Control Circuit",
+        "causes": [
+          "EGR valve stuck or clogged",
+          "Blocked EGR passages",
+          "Wiring fault",
+          "DPFE/EGR sensor issue"
+        ]
+      },
+      "ka": {
+        "title": "EGR მართვის წრედი",
+        "causes": [
+          "EGR სარქველი გაჭედილია ან დაბინძურებულია",
+          "EGR არხები დახშულია",
+          "გაყვანილობის პრობლემა",
+          "EGR/DPFE სენსორის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления EGR",
+        "causes": [
+          "Клапан EGR заклинил или загрязнён",
+          "Засорены каналы EGR",
+          "Проблема проводки",
+          "Неисправность датчика EGR/DPFE"
+        ]
+      }
+    },
+    "P0404": {
+      "category": "EGR",
+      "severity": "medium",
+      "en": {
+        "title": "EGR Control Circuit Range/Performance",
+        "causes": [
+          "EGR valve stuck or clogged",
+          "Blocked EGR passages",
+          "Wiring fault",
+          "DPFE/EGR sensor issue"
+        ]
+      },
+      "ka": {
+        "title": "EGR მართვის წრედი — დიაპაზონი/მუშაობა",
+        "causes": [
+          "EGR სარქველი გაჭედილია ან დაბინძურებულია",
+          "EGR არხები დახშულია",
+          "გაყვანილობის პრობლემა",
+          "EGR/DPFE სენსორის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа цепи EGR",
+        "causes": [
+          "Клапан EGR заклинил или загрязнён",
+          "Засорены каналы EGR",
+          "Проблема проводки",
+          "Неисправность датчика EGR/DPFE"
+        ]
+      }
+    },
+    "P0410": {
+      "category": "Emissions",
+      "severity": "low",
+      "en": {
+        "title": "Secondary Air Injection System Malfunction",
+        "causes": [
+          "Secondary air pump fault",
+          "Relay/fuse problem",
+          "Blocked air passages",
+          "Check valve fault"
+        ]
+      },
+      "ka": {
+        "title": "მეორადი ჰაერის ინექციის სისტემის გაუმართაობა",
+        "causes": [
+          "მეორადი ჰაერის ტუმბოს პრობლემა",
+          "რელეს/ფიუზის პრობლემა",
+          "ჰაერის არხების დახშობა",
+          "უკუმცემი სარქვლის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность системы вторичного воздуха",
+        "causes": [
+          "Неисправность насоса вторичного воздуха",
+          "Реле/предохранитель",
+          "Засор каналов",
+          "Неисправность обратного клапана"
+        ]
+      }
+    },
+    "P0420": {
+      "category": "Catalyst",
+      "severity": "medium",
+      "en": {
+        "title": "Catalyst System Efficiency Below Threshold – Bank 1",
+        "causes": [
+          "Catalytic converter efficiency loss",
+          "Oxygen sensor fault",
+          "Exhaust leak",
+          "Engine misfire or rich/lean mixture"
+        ]
+      },
+      "ka": {
+        "title": "კატალიზატორის ეფექტურობა ნორმაზე დაბალია — Bank 1",
+        "causes": [
+          "კატალიზატორის ეფექტურობის შემცირება",
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "ანთების გამოტოვება ან არასწორი ნარევი"
+        ]
+      },
+      "ru": {
+        "title": "Эффективность катализатора ниже порога — Bank 1",
+        "causes": [
+          "Снижение эффективности катализатора",
+          "Неисправность датчика кислорода",
+          "Утечка выхлопа",
+          "Пропуски зажигания или неправильная смесь"
+        ]
+      }
+    },
+    "P0430": {
+      "category": "Catalyst",
+      "severity": "medium",
+      "en": {
+        "title": "Catalyst System Efficiency Below Threshold – Bank 2",
+        "causes": [
+          "Catalytic converter efficiency loss",
+          "Oxygen sensor fault",
+          "Exhaust leak",
+          "Engine misfire or rich/lean mixture"
+        ]
+      },
+      "ka": {
+        "title": "კატალიზატორის ეფექტურობა ნორმაზე დაბალია — Bank 2",
+        "causes": [
+          "კატალიზატორის ეფექტურობის შემცირება",
+          "ჟანგბადის სენსორის პრობლემა",
+          "გამონაბოლქვის გაჟონვა",
+          "ანთების გამოტოვება ან არასწორი ნარევი"
+        ]
+      },
+      "ru": {
+        "title": "Эффективность катализатора ниже порога — Bank 2",
+        "causes": [
+          "Снижение эффективности катализатора",
+          "Неисправность датчика кислорода",
+          "Утечка выхлопа",
+          "Пропуски зажигания или неправильная смесь"
+        ]
+      }
+    },
+    "P0440": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP System Malfunction",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP სისტემის გაუმართაობა",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность системы EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0441": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP System Incorrect Purge Flow",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP სისტემაში purge ნაკადი არასწორია",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неверный поток продувки EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0442": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP System Small Leak Detected",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP სისტემაში მცირე გაჟონვა",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обнаружена небольшая утечка EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0443": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP Purge Control Valve Circuit",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP purge სარქვლის წრედი",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь клапана продувки EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0446": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP Vent Control Circuit",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP vent სარქვლის მართვის წრედი",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления вентиляцией EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0455": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP System Large Leak Detected",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP სისტემაში დიდი გაჟონვა",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обнаружена крупная утечка EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0456": {
+      "category": "EVAP",
+      "severity": "low",
+      "en": {
+        "title": "EVAP System Very Small Leak Detected",
+        "causes": [
+          "Loose or damaged fuel cap",
+          "EVAP hose leak",
+          "Purge valve fault",
+          "Vent valve fault"
+        ]
+      },
+      "ka": {
+        "title": "EVAP სისტემაში ძალიან მცირე გაჟონვა",
+        "causes": [
+          "საწვავის თავსახური ცუდად არის დახურული ან დაზიანებულია",
+          "EVAP მილის გაჟონვა",
+          "Purge valve-ის პრობლემა",
+          "Vent valve-ის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обнаружена очень малая утечка EVAP",
+        "causes": [
+          "Неплотная или повреждённая крышка бака",
+          "Утечка шланга EVAP",
+          "Неисправность клапана продувки",
+          "Неисправность вентиляционного клапана"
+        ]
+      }
+    },
+    "P0500": {
+      "category": "Idle/Speed",
+      "severity": "medium",
+      "en": {
+        "title": "Vehicle Speed Sensor A Malfunction",
+        "causes": [
+          "Damaged sensor",
+          "Wiring or connector fault",
+          "Poor ground or power supply",
+          "Signal out of range"
+        ]
+      },
+      "ka": {
+        "title": "ავტომობილის სიჩქარის სენსორი A — გაუმართაობა",
+        "causes": [
+          "სენსორის დაზიანება",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "მასის ან კვების პრობლემა",
+          "სიგნალი დასაშვებ დიაპაზონს გარეთ"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность датчика скорости автомобиля A",
+        "causes": [
+          "Неисправный датчик",
+          "Проводка или разъём",
+          "Проблема питания или массы",
+          "Сигнал вне допустимого диапазона"
+        ]
+      }
+    },
+    "P0505": {
+      "category": "Idle/Speed",
+      "severity": "medium",
+      "en": {
+        "title": "Idle Control System Malfunction",
+        "causes": [
+          "Dirty throttle body",
+          "Idle air control fault",
+          "Vacuum leak",
+          "Throttle adaptation issue",
+          "Wiring or sensor problem"
+        ]
+      },
+      "ka": {
+        "title": "უქმი სვლის მართვის სისტემის გაუმართაობა",
+        "causes": [
+          "დაბინძურებული დროსელი",
+          "Idle air control-ის პრობლემა",
+          "ვაკუუმის გაჟონვა",
+          "დროსელის ადაპტაციის პრობლემა",
+          "სენსორის/გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность системы холостого хода",
+        "causes": [
+          "Загрязнённый дроссель",
+          "Неисправность регулятора холостого хода",
+          "Подсос воздуха",
+          "Проблема адаптации дросселя",
+          "Датчик/проводка"
+        ]
+      }
+    },
+    "P0506": {
+      "category": "Idle/Speed",
+      "severity": "medium",
+      "en": {
+        "title": "Idle Speed Lower Than Expected",
+        "causes": [
+          "Dirty throttle body",
+          "Idle air control fault",
+          "Vacuum leak",
+          "Throttle adaptation issue",
+          "Wiring or sensor problem"
+        ]
+      },
+      "ka": {
+        "title": "უქმი სვლის ბრუნი მოსალოდნელზე დაბალია",
+        "causes": [
+          "დაბინძურებული დროსელი",
+          "Idle air control-ის პრობლემა",
+          "ვაკუუმის გაჟონვა",
+          "დროსელის ადაპტაციის პრობლემა",
+          "სენსორის/გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обороты холостого хода ниже нормы",
+        "causes": [
+          "Загрязнённый дроссель",
+          "Неисправность регулятора холостого хода",
+          "Подсос воздуха",
+          "Проблема адаптации дросселя",
+          "Датчик/проводка"
+        ]
+      }
+    },
+    "P0507": {
+      "category": "Idle/Speed",
+      "severity": "medium",
+      "en": {
+        "title": "Idle Speed Higher Than Expected",
+        "causes": [
+          "Dirty throttle body",
+          "Idle air control fault",
+          "Vacuum leak",
+          "Throttle adaptation issue",
+          "Wiring or sensor problem"
+        ]
+      },
+      "ka": {
+        "title": "უქმი სვლის ბრუნი მოსალოდნელზე მაღალია",
+        "causes": [
+          "დაბინძურებული დროსელი",
+          "Idle air control-ის პრობლემა",
+          "ვაკუუმის გაჟონვა",
+          "დროსელის ადაპტაციის პრობლემა",
+          "სენსორის/გაყვანილობის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Обороты холостого хода выше нормы",
+        "causes": [
+          "Загрязнённый дроссель",
+          "Неисправность регулятора холостого хода",
+          "Подсос воздуха",
+          "Проблема адаптации дросселя",
+          "Датчик/проводка"
+        ]
+      }
+    },
+    "P0520": {
+      "category": "Oil Pressure",
+      "severity": "high",
+      "en": {
+        "title": "Engine Oil Pressure Sensor/Switch Circuit",
+        "causes": [
+          "Low engine oil level",
+          "Oil pressure sensor fault",
+          "Wiring problem",
+          "Oil pump or internal engine issue"
+        ]
+      },
+      "ka": {
+        "title": "ძრავის ზეთის წნევის სენსორის/ჩამრთველის წრედი",
+        "causes": [
+          "ძრავის ზეთის დაბალი დონე",
+          "ზეთის წნევის სენსორის პრობლემა",
+          "გაყვანილობის პრობლემა",
+          "ზეთის ტუმბოს ან ძრავის შიდა პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика/выключателя давления масла",
+        "causes": [
+          "Низкий уровень масла",
+          "Неисправность датчика давления масла",
+          "Проводка",
+          "Проблема масляного насоса или двигателя"
+        ]
+      }
+    },
+    "P0521": {
+      "category": "Oil Pressure",
+      "severity": "high",
+      "en": {
+        "title": "Engine Oil Pressure Sensor Range/Performance",
+        "causes": [
+          "Low engine oil level",
+          "Oil pressure sensor fault",
+          "Wiring problem",
+          "Oil pump or internal engine issue"
+        ]
+      },
+      "ka": {
+        "title": "ზეთის წნევის სენსორი — დიაპაზონი/მუშაობა",
+        "causes": [
+          "ძრავის ზეთის დაბალი დონე",
+          "ზეთის წნევის სენსორის პრობლემა",
+          "გაყვანილობის პრობლემა",
+          "ზეთის ტუმბოს ან ძრავის შიდა პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика давления масла",
+        "causes": [
+          "Низкий уровень масла",
+          "Неисправность датчика давления масла",
+          "Проводка",
+          "Проблема масляного насоса или двигателя"
+        ]
+      }
+    },
+    "P0522": {
+      "category": "Oil Pressure",
+      "severity": "high",
+      "en": {
+        "title": "Engine Oil Pressure Sensor Low Voltage",
+        "causes": [
+          "Low engine oil level",
+          "Oil pressure sensor fault",
+          "Wiring problem",
+          "Oil pump or internal engine issue"
+        ]
+      },
+      "ka": {
+        "title": "ზეთის წნევის სენსორის დაბალი ძაბვა",
+        "causes": [
+          "ძრავის ზეთის დაბალი დონე",
+          "ზეთის წნევის სენსორის პრობლემა",
+          "გაყვანილობის პრობლემა",
+          "ზეთის ტუმბოს ან ძრავის შიდა პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Низкое напряжение датчика давления масла",
+        "causes": [
+          "Низкий уровень масла",
+          "Неисправность датчика давления масла",
+          "Проводка",
+          "Проблема масляного насоса или двигателя"
+        ]
+      }
+    },
+    "P0523": {
+      "category": "Oil Pressure",
+      "severity": "high",
+      "en": {
+        "title": "Engine Oil Pressure Sensor High Voltage",
+        "causes": [
+          "Low engine oil level",
+          "Oil pressure sensor fault",
+          "Wiring problem",
+          "Oil pump or internal engine issue"
+        ]
+      },
+      "ka": {
+        "title": "ზეთის წნევის სენსორის მაღალი ძაბვა",
+        "causes": [
+          "ძრავის ზეთის დაბალი დონე",
+          "ზეთის წნევის სენსორის პრობლემა",
+          "გაყვანილობის პრობლემა",
+          "ზეთის ტუმბოს ან ძრავის შიდა პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Высокое напряжение датчика давления масла",
+        "causes": [
+          "Низкий уровень масла",
+          "Неисправность датчика давления масла",
+          "Проводка",
+          "Проблема масляного насоса или двигателя"
+        ]
+      }
+    },
+    "P0560": {
+      "category": "Electrical",
+      "severity": "high",
+      "en": {
+        "title": "System Voltage Malfunction",
+        "causes": [
+          "Weak battery",
+          "Alternator/charging fault",
+          "Loose/corroded battery terminals",
+          "Wiring/ground problem"
+        ]
+      },
+      "ka": {
+        "title": "სისტემის ძაბვის გაუმართაობა",
+        "causes": [
+          "სუსტი აკუმულატორი",
+          "გენერატორის/დამუხტვის პრობლემა",
+          "მოშვებული ან დაჟანგებული კლემები",
+          "გაყვანილობის/მასის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность напряжения системы",
+        "causes": [
+          "Слабый аккумулятор",
+          "Неисправность генератора/зарядки",
+          "Ослабленные или окисленные клеммы",
+          "Проводка/масса"
+        ]
+      }
+    },
+    "P0562": {
+      "category": "Electrical",
+      "severity": "high",
+      "en": {
+        "title": "System Voltage Low",
+        "causes": [
+          "Weak battery",
+          "Alternator/charging fault",
+          "Loose/corroded battery terminals",
+          "Wiring/ground problem"
+        ]
+      },
+      "ka": {
+        "title": "სისტემის ძაბვა დაბალია",
+        "causes": [
+          "სუსტი აკუმულატორი",
+          "გენერატორის/დამუხტვის პრობლემა",
+          "მოშვებული ან დაჟანგებული კლემები",
+          "გაყვანილობის/მასის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Низкое напряжение системы",
+        "causes": [
+          "Слабый аккумулятор",
+          "Неисправность генератора/зарядки",
+          "Ослабленные или окисленные клеммы",
+          "Проводка/масса"
+        ]
+      }
+    },
+    "P0563": {
+      "category": "Electrical",
+      "severity": "high",
+      "en": {
+        "title": "System Voltage High",
+        "causes": [
+          "Weak battery",
+          "Alternator/charging fault",
+          "Loose/corroded battery terminals",
+          "Wiring/ground problem"
+        ]
+      },
+      "ka": {
+        "title": "სისტემის ძაბვა მაღალია",
+        "causes": [
+          "სუსტი აკუმულატორი",
+          "გენერატორის/დამუხტვის პრობლემა",
+          "მოშვებული ან დაჟანგებული კლემები",
+          "გაყვანილობის/მასის პრობლემა"
+        ]
+      },
+      "ru": {
+        "title": "Высокое напряжение системы",
+        "causes": [
+          "Слабый аккумулятор",
+          "Неисправность генератора/зарядки",
+          "Ослабленные или окисленные клеммы",
+          "Проводка/масса"
+        ]
+      }
+    },
+    "P0600": {
+      "category": "ECU/Electrical",
+      "severity": "high",
+      "en": {
+        "title": "Serial Communication Link Malfunction",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "სერიული კომუნიკაციის არხის გაუმართაობა",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность последовательной связи",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0601": {
+      "category": "ECU/Electrical",
+      "severity": "high",
+      "en": {
+        "title": "Internal Control Module Memory Check Sum Error",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "მართვის ბლოკის მეხსიერების checksum შეცდომა",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Ошибка контрольной суммы памяти блока управления",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0602": {
+      "category": "ECU/Electrical",
+      "severity": "high",
+      "en": {
+        "title": "Control Module Programming Error",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "მართვის ბლოკის პროგრამირების შეცდომა",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Ошибка программирования блока управления",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0603": {
+      "category": "ECU/Electrical",
+      "severity": "high",
+      "en": {
+        "title": "Internal Control Module Keep Alive Memory Error",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "მართვის ბლოკის Keep Alive მეხსიერების შეცდომა",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Ошибка памяти Keep Alive блока управления",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0606": {
+      "category": "ECU/Electrical",
+      "severity": "critical",
+      "en": {
+        "title": "ECM/PCM Processor Fault",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "ECM/PCM პროცესორის გაუმართაობა",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность процессора ECM/PCM",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0650": {
+      "category": "ECU/Electrical",
+      "severity": "low",
+      "en": {
+        "title": "Malfunction Indicator Lamp Control Circuit",
+        "causes": [
+          "Low system voltage",
+          "Power/ground issue",
+          "Wiring or CAN communication fault",
+          "Control module internal fault"
+        ]
+      },
+      "ka": {
+        "title": "Check Engine ნათურის მართვის წრედი",
+        "causes": [
+          "დაბალი სისტემური ძაბვა",
+          "კვების/მასის პრობლემა",
+          "გაყვანილობის ან CAN კომუნიკაციის პრობლემა",
+          "მართვის ბლოკის შიდა გაუმართაობა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь управления лампой Check Engine",
+        "causes": [
+          "Низкое напряжение системы",
+          "Питание/масса",
+          "Проводка или CAN-связь",
+          "Внутренняя неисправность блока управления"
+        ]
+      }
+    },
+    "P0700": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Transmission Control System Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის მართვის სისტემის გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность системы управления трансмиссией",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0705": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Transmission Range Sensor Circuit Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის დიაპაზონის სენსორის წრედი",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика диапазона трансмиссии",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0710": {
+      "category": "Transmission",
+      "severity": "medium",
+      "en": {
+        "title": "Transmission Fluid Temperature Sensor Circuit",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის სითხის ტემპერატურის სენსორის წრედი",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика температуры трансмиссионной жидкости",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0715": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Input/Turbine Speed Sensor A Circuit",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "შესასვლელი/ტურბინის სიჩქარის სენსორი A — წრედი",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика входной/турбинной скорости A",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0720": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Output Speed Sensor Circuit",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გამომავალი სიჩქარის სენსორის წრედი",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Цепь датчика выходной скорости",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0722": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Output Speed Sensor No Signal",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გამომავალი სიჩქარის სენსორის სიგნალი არ არის",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Нет сигнала датчика выходной скорости",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0730": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Incorrect Gear Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0731": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Gear 1 Incorrect Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "1-ლი გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение 1-й передачи",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0732": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Gear 2 Incorrect Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "2-ე გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение 2-й передачи",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0733": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Gear 3 Incorrect Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "3-ე გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение 3-й передачи",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0734": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Gear 4 Incorrect Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "4-ე გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение 4-й передачи",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0735": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Gear 5 Incorrect Ratio",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "5-ე გადაცემის არასწორი შეფარდება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неверное передаточное отношение 5-й передачи",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0740": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Torque Converter Clutch Circuit Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ჰიდროტრანსფორმატორის Lock-up წრედის გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность цепи блокировки гидротрансформатора",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0741": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Torque Converter Clutch Performance/Stuck Off",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ჰიდროტრანსფორმატორის Lock-up — მუშაობა/არ იკეტება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Муфта гидротрансформатора — неисправность/не включается",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0750": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Solenoid A Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის სოლენოიდი A — გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность соленоида переключения A",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0755": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Solenoid B Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის სოლენოიდი B — გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность соленоида переключения B",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0760": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Solenoid C Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის სოლენოიდი C — გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность соленоида переключения C",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0765": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Solenoid D Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის სოლენოიდი D — გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность соленоида переключения D",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0770": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Solenoid E Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემის სოლენოიდი E — გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность соленоида переключения E",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0780": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Shift Malfunction",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "გადაცემათა გადართვის გაუმართაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Неисправность переключения передач",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0841": {
+      "category": "Transmission",
+      "severity": "high",
+      "en": {
+        "title": "Transmission Fluid Pressure Sensor/Switch A Range/Performance",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის სითხის წნევის სენსორი A — დიაპაზონი/მუშაობა",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Диапазон/работа датчика давления ATF A",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0868": {
+      "category": "Transmission",
+      "severity": "critical",
+      "en": {
+        "title": "Transmission Fluid Pressure Low",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის სითხის წნევა დაბალია",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Низкое давление трансмиссионной жидкости",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    },
+    "P0894": {
+      "category": "Transmission",
+      "severity": "critical",
+      "en": {
+        "title": "Transmission Component Slipping",
+        "causes": [
+          "Low or contaminated transmission fluid",
+          "Solenoid fault",
+          "Valve body issue",
+          "Wiring or connector problem",
+          "Internal transmission wear"
+        ]
+      },
+      "ka": {
+        "title": "ტრანსმისიის კომპონენტის მოცურება",
+        "causes": [
+          "ტრანსმისიის სითხე დაბალია ან დაბინძურებულია",
+          "სოლენოიდის პრობლემა",
+          "Valve body-ის პრობლემა",
+          "გაყვანილობის ან კონექტორის პრობლემა",
+          "ტრანსმისიის შიდა ცვეთა"
+        ]
+      },
+      "ru": {
+        "title": "Пробуксовка компонентов трансмиссии",
+        "causes": [
+          "Низкий уровень или загрязнение ATF",
+          "Неисправность соленоида",
+          "Проблема гидроблока",
+          "Проводка или разъём",
+          "Внутренний износ трансмиссии"
+        ]
+      }
+    }
+  }
+}

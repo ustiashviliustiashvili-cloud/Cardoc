@@ -1,495 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#08111f" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
   <title>CarDoc</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #08111f;
-      color: #ffffff;
-      min-height: 100vh;
-    }
-
-    .app {
-      width: 100%;
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 22px 18px 36px;
-    }
-
-    .top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: 800;
-      color: #43a5ff;
-      letter-spacing: -1px;
-    }
-
-    .language-select {
-      background: #132238;
-      color: #ffffff;
-      border: 1px solid #29405e;
-      padding: 12px 14px;
-      border-radius: 14px;
-      font-size: 15px;
-      outline: none;
-      min-width: 130px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #10223d, #0b1729);
-      border: 1px solid #1f3857;
-      border-radius: 24px;
-      padding: 26px 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    .hero h1 {
-      font-size: 30px;
-      line-height: 1.18;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      color: #a7b6c9;
-      line-height: 1.55;
-      font-size: 16px;
-    }
-
-    .search-box {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .search-box input {
-      width: 100%;
-      background: #08111f;
-      border: 1px solid #355272;
-      color: #ffffff;
-      padding: 16px;
-      border-radius: 14px;
-      font-size: 17px;
-      text-transform: uppercase;
-      outline: none;
-    }
-
-    .search-box input:focus {
-      border-color: #43a5ff;
-      box-shadow: 0 0 0 3px rgba(67, 165, 255, 0.12);
-    }
-
-    .search-box button {
-      width: 100%;
-      min-height: 54px;
-      background: #168cff;
-      color: #ffffff;
-      border: none;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .search-box button:active {
-      transform: scale(0.99);
-    }
-
-    .menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .card {
-      background: #111e31;
-      border: 1px solid #203853;
-      border-radius: 20px;
-      padding: 20px 16px;
-      min-height: 145px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .icon {
-      font-size: 32px;
-      margin-bottom: 14px;
-    }
-
-    .card h3 {
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #8192a8;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    #result {
-      display: none;
-      margin-top: 22px;
-      background: #101e31;
-      border: 1px solid #2d4e70;
-      padding: 20px;
-      border-radius: 20px;
-    }
-
-    #result h2 {
-      color: #43a5ff;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    #resultTitle {
-      color: #ffffff !important;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    #result p {
-      margin: 8px 0;
-      line-height: 1.5;
-      color: #c9d5e3;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-top: 12px;
-      background: #573514;
-      color: #ffba5c;
-      padding: 8px 12px;
-      border-radius: 9px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    @media (max-width: 390px) {
-      .app {
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-
-      .logo {
-        font-size: 28px;
-      }
-
-      .language-select {
-        min-width: 118px;
-      }
-
-      .hero h1 {
-        font-size: 27px;
-      }
-    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#08111f;color:#fff;min-height:100vh}
+    .app{width:100%;max-width:520px;margin:auto;padding:22px 18px 36px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:30px}
+    .logo{font-size:32px;font-weight:800;color:#43a5ff;letter-spacing:-1px}
+    .language-select{background:#132238;color:#fff;border:1px solid #29405e;padding:12px 14px;border-radius:14px;font-size:15px;min-width:130px}
+    .hero{background:linear-gradient(135deg,#10223d,#0b1729);border:1px solid #1f3857;border-radius:24px;padding:26px 20px;margin-bottom:24px}
+    .hero h1{font-size:30px;line-height:1.18;margin-bottom:12px}
+    .hero p{color:#a7b6c9;line-height:1.55;font-size:16px}
+    .db-status{margin-top:12px;font-size:13px;color:#7f93aa}
+    .search-box{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+    .search-box input{width:100%;background:#08111f;border:1px solid #355272;color:#fff;padding:16px;border-radius:14px;font-size:17px;text-transform:uppercase;outline:none}
+    .search-box button{width:100%;min-height:54px;background:#168cff;color:#fff;border:0;border-radius:14px;font-size:17px;font-weight:700}
+    .menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{background:#111e31;border:1px solid #203853;border-radius:20px;padding:20px 16px;min-height:145px}
+    .icon{font-size:32px;margin-bottom:14px}.card h3{font-size:17px;margin-bottom:8px}.card p{color:#8192a8;font-size:14px;line-height:1.4}
+    #result{display:none;margin-top:22px;background:#101e31;border:1px solid #2d4e70;padding:20px;border-radius:20px}
+    #result h2{color:#43a5ff;margin-bottom:10px;font-size:24px}
+    #resultTitle{color:#fff!important;font-weight:700;font-size:18px}
+    #result p{margin:8px 0;line-height:1.5;color:#c9d5e3}
+    #causes{margin:12px 0 0 20px;color:#c9d5e3}
+    #causes li{margin:7px 0;line-height:1.4}
+    .badge{display:inline-block;margin-top:14px;padding:8px 12px;border-radius:9px;font-size:13px;font-weight:700}
+    .low{background:#153e31;color:#67e3aa}.medium{background:#573514;color:#ffba5c}.high{background:#542327;color:#ff8f98}.critical{background:#5b1218;color:#ff6b78}
+    .error{color:#ff8f98!important}
+    @media(max-width:390px){.app{padding-left:14px;padding-right:14px}.logo{font-size:28px}.language-select{min-width:118px}.hero h1{font-size:27px}}
   </style>
 </head>
-
 <body>
-  <div class="app">
+<div class="app">
+  <div class="top">
+    <div class="logo">CarDoc</div>
+    <select id="language" class="language-select">
+      <option value="en">English</option>
+      <option value="ka">ქართული</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
 
-    <div class="top">
-      <div class="logo">CarDoc</div>
+  <div class="hero">
+    <h1 id="title">What's wrong with your car?</h1>
+    <p id="subtitle">Enter an OBD trouble code and CarDoc will explain the problem.</p>
+    <div id="dbStatus" class="db-status">Loading code database…</div>
 
-      <select id="language" class="language-select">
-        <option value="en">English</option>
-        <option value="ka">ქართული</option>
-        <option value="ru">Русский</option>
-      </select>
-    </div>
-
-    <div class="hero">
-      <h1 id="title">What's wrong with your car?</h1>
-
-      <p id="subtitle">
-        Enter an OBD trouble code and CarDoc will explain the problem.
-      </p>
-
-      <div class="search-box">
-        <input
-          id="codeInput"
-          placeholder="EXAMPLE: P0301"
-          maxlength="5"
-          autocomplete="off"
-        />
-
-        <button id="scanButton" onclick="diagnose()">Scan</button>
-      </div>
-    </div>
-
-    <div class="menu">
-      <div class="card">
-        <div class="icon">🚗</div>
-        <h3 id="garageTitle">My Garage</h3>
-        <p id="garageText">Save your cars</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3 id="symptomsTitle">Symptoms</h3>
-        <p id="symptomsText">Describe the problem</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📋</div>
-        <h3 id="historyTitle">History</h3>
-        <p id="historyText">Previous diagnostics</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🔧</div>
-        <h3 id="maintenanceTitle">Maintenance</h3>
-        <p id="maintenanceText">Service reminders</p>
-      </div>
-    </div>
-
-    <div id="result">
-      <h2 id="resultCode"></h2>
-      <p id="resultTitle"></p>
-      <p id="resultCause"></p>
-      <span class="badge" id="severity"></span>
+    <div class="search-box">
+      <input id="codeInput" placeholder="EXAMPLE: P0301" maxlength="5" autocomplete="off">
+      <button id="scanButton" onclick="diagnose()">Scan</button>
     </div>
   </div>
 
-  <script>
-    const codeData = {
-      P0300: {
-        en: {
-          title: "Random / Multiple Cylinder Misfire",
-          cause: "Possible causes: spark plugs, ignition coils, injectors, fuel pressure or vacuum leak.",
-          severity: "Needs attention"
-        },
-        ka: {
-          title: "რამდენიმე ცილინდრში ანთების გამოტოვება",
-          cause: "შესაძლო მიზეზები: სანთლები, ანთების კოჭები, ინჟექტორები, საწვავის წნევა ან ჰაერის გაჟონვა.",
-          severity: "საჭიროა შემოწმება"
-        },
-        ru: {
-          title: "Пропуски зажигания в нескольких цилиндрах",
-          cause: "Возможные причины: свечи, катушки зажигания, форсунки, давление топлива или подсос воздуха.",
-          severity: "Требует проверки"
-        }
-      },
+  <div class="menu">
+    <div class="card"><div class="icon">🚗</div><h3 id="garageTitle">My Garage</h3><p id="garageText">Save your cars</p></div>
+    <div class="card"><div class="icon">🤖</div><h3 id="symptomsTitle">Symptoms</h3><p id="symptomsText">Describe the problem</p></div>
+    <div class="card"><div class="icon">📋</div><h3 id="historyTitle">History</h3><p id="historyText">Previous diagnostics</p></div>
+    <div class="card"><div class="icon">🔧</div><h3 id="maintenanceTitle">Maintenance</h3><p id="maintenanceText">Service reminders</p></div>
+  </div>
 
-      P0301: {
-        en: {
-          title: "Cylinder 1 Misfire Detected",
-          cause: "Possible causes: spark plug, ignition coil, injector, compression problem or air leak.",
-          severity: "Needs attention"
-        },
-        ka: {
-          title: "პირველ ცილინდრში ანთების გამოტოვება",
-          cause: "შესაძლო მიზეზები: სანთელი, ანთების კოჭა, ინჟექტორი, კომპრესიის პრობლემა ან ჰაერის გაჟონვა.",
-          severity: "საჭიროა შემოწმება"
-        },
-        ru: {
-          title: "Пропуски зажигания в 1 цилиндре",
-          cause: "Возможные причины: свеча, катушка зажигания, форсунка, низкая компрессия или подсос воздуха.",
-          severity: "Требует проверки"
-        }
-      },
+  <div id="result">
+    <h2 id="resultCode"></h2>
+    <p id="resultTitle"></p>
+    <p id="categoryLine"></p>
+    <ul id="causes"></ul>
+    <span class="badge" id="severity"></span>
+  </div>
+</div>
 
-      P0420: {
-        en: {
-          title: "Catalyst System Efficiency Below Threshold",
-          cause: "Possible causes: catalytic converter, oxygen sensor, exhaust leak or engine running problem.",
-          severity: "Check soon"
-        },
-        ka: {
-          title: "კატალიზატორის ეფექტურობა ნორმაზე დაბალია",
-          cause: "შესაძლო მიზეზები: კატალიზატორი, ჟანგბადის სენსორი, გამონაბოლქვის გაჟონვა ან ძრავის მუშაობის პრობლემა.",
-          severity: "მალე შეამოწმეთ"
-        },
-        ru: {
-          title: "Низкая эффективность катализатора",
-          cause: "Возможные причины: катализатор, датчик кислорода, утечка выхлопа или неисправность двигателя.",
-          severity: "Проверьте в ближайшее время"
-        }
-      },
+<script>
+let codeDatabase = {};
 
-      P0171: {
-        en: {
-          title: "System Too Lean – Bank 1",
-          cause: "Possible causes: vacuum leak, MAF sensor, fuel pressure or injector problem.",
-          severity: "Check soon"
-        },
-        ka: {
-          title: "ღარიბი ნარევი – Bank 1",
-          cause: "შესაძლო მიზეზები: ვაკუუმის გაჟონვა, MAF სენსორი, საწვავის წნევა ან ინჟექტორი.",
-          severity: "მალე შეამოწმეთ"
-        },
-        ru: {
-          title: "Слишком бедная смесь – Bank 1",
-          cause: "Возможные причины: подсос воздуха, датчик MAF, давление топлива или форсунка.",
-          severity: "Проверьте в ближайшее время"
-        }
-      },
+const translations = {
+  en:{
+    title:"What's wrong with your car?",
+    subtitle:"Enter an OBD trouble code and CarDoc will explain the problem.",
+    placeholder:"EXAMPLE: P0301",scan:"Scan",
+    garageTitle:"My Garage",garageText:"Save your cars",
+    symptomsTitle:"Symptoms",symptomsText:"Describe the problem",
+    historyTitle:"History",historyText:"Previous diagnostics",
+    maintenanceTitle:"Maintenance",maintenanceText:"Service reminders",
+    emptyAlert:"Enter an OBD code",notFoundTitle:"Code not found in the current database.",
+    category:"Category",possibleCauses:"Possible causes",
+    severities:{low:"Low",medium:"Medium",high:"High",critical:"Critical"},
+    dbLoaded:n=>`${n} OBD-II codes loaded`,
+    dbError:"Could not load codes.json"
+  },
+  ka:{
+    title:"რა პრობლემა აქვს თქვენს მანქანას?",
+    subtitle:"შეიყვანეთ OBD შეცდომის კოდი და CarDoc აგიხსნით პრობლემას.",
+    placeholder:"მაგალითი: P0301",scan:"ძებნა",
+    garageTitle:"ჩემი მანქანები",garageText:"შეინახეთ თქვენი მანქანები",
+    symptomsTitle:"სიმპტომები",symptomsText:"აღწერეთ პრობლემა",
+    historyTitle:"ისტორია",historyText:"წინა დიაგნოსტიკა",
+    maintenanceTitle:"მომსახურება",maintenanceText:"სერვისის შეხსენებები",
+    emptyAlert:"შეიყვანეთ OBD კოდი",notFoundTitle:"ეს კოდი მიმდინარე ბაზაში ვერ მოიძებნა.",
+    category:"კატეგორია",possibleCauses:"შესაძლო მიზეზები",
+    severities:{low:"დაბალი",medium:"საშუალო",high:"მაღალი",critical:"კრიტიკული"},
+    dbLoaded:n=>`ჩატვირთულია ${n} OBD-II კოდი`,
+    dbError:"codes.json ვერ ჩაიტვირთა"
+  },
+  ru:{
+    title:"Что не так с вашим автомобилем?",
+    subtitle:"Введите код OBD, и CarDoc объяснит возможную проблему.",
+    placeholder:"ПРИМЕР: P0301",scan:"Поиск",
+    garageTitle:"Мои автомобили",garageText:"Сохраните свои автомобили",
+    symptomsTitle:"Симптомы",symptomsText:"Опишите проблему",
+    historyTitle:"История",historyText:"Предыдущая диагностика",
+    maintenanceTitle:"Обслуживание",maintenanceText:"Напоминания о сервисе",
+    emptyAlert:"Введите OBD-код",notFoundTitle:"Код не найден в текущей базе.",
+    category:"Категория",possibleCauses:"Возможные причины",
+    severities:{low:"Низкая",medium:"Средняя",high:"Высокая",critical:"Критическая"},
+    dbLoaded:n=>`Загружено кодов OBD-II: ${n}`,
+    dbError:"Не удалось загрузить codes.json"
+  }
+};
 
-      P0455: {
-        en: {
-          title: "Large EVAP System Leak Detected",
-          cause: "Possible causes: loose fuel cap, damaged EVAP hose, purge valve or leak in the fuel vapor system.",
-          severity: "Usually not urgent"
-        },
-        ka: {
-          title: "EVAP სისტემაში დიდი გაჟონვა",
-          cause: "შესაძლო მიზეზები: ცუდად დახურული საწვავის თავსახური, დაზიანებული EVAP მილი, purge valve ან ორთქლის სისტემის გაჟონვა.",
-          severity: "ჩვეულებრივ არ არის სასწრაფო"
-        },
-        ru: {
-          title: "Обнаружена крупная утечка системы EVAP",
-          cause: "Возможные причины: крышка бака, шланг EVAP, клапан продувки или утечка паров топлива.",
-          severity: "Обычно не срочно"
-        }
-      }
-    };
+const languageSelect = document.getElementById("language");
 
-    const translations = {
-      en: {
-        title: "What's wrong with your car?",
-        subtitle: "Enter an OBD trouble code and CarDoc will explain the problem.",
-        placeholder: "EXAMPLE: P0301",
-        scan: "Scan",
-        garageTitle: "My Garage",
-        garageText: "Save your cars",
-        symptomsTitle: "Symptoms",
-        symptomsText: "Describe the problem",
-        historyTitle: "History",
-        historyText: "Previous diagnostics",
-        maintenanceTitle: "Maintenance",
-        maintenanceText: "Service reminders",
-        emptyAlert: "Enter an OBD code",
-        notFoundTitle: "Code not found yet.",
-        notFoundText: "CarDoc database will be expanded with thousands of OBD-II codes.",
-        unknown: "Unknown"
-      },
+async function loadDatabase(){
+  const status = document.getElementById("dbStatus");
+  try{
+    const response = await fetch("./codes.json", {cache:"no-store"});
+    if(!response.ok) throw new Error("HTTP " + response.status);
+    const data = await response.json();
+    codeDatabase = data.codes || {};
+    updateDbStatus();
+  }catch(err){
+    status.textContent = translations[languageSelect.value].dbError;
+    status.classList.add("error");
+    console.error(err);
+  }
+}
 
-      ka: {
-        title: "რა პრობლემა აქვს თქვენს მანქანას?",
-        subtitle: "შეიყვანეთ OBD შეცდომის კოდი და CarDoc აგიხსნით პრობლემას.",
-        placeholder: "მაგალითი: P0301",
-        scan: "ძებნა",
-        garageTitle: "ჩემი მანქანები",
-        garageText: "შეინახეთ თქვენი მანქანები",
-        symptomsTitle: "სიმპტომები",
-        symptomsText: "აღწერეთ პრობლემა",
-        historyTitle: "ისტორია",
-        historyText: "წინა დიაგნოსტიკა",
-        maintenanceTitle: "მომსახურება",
-        maintenanceText: "სერვისის შეხსენებები",
-        emptyAlert: "შეიყვანეთ OBD კოდი",
-        notFoundTitle: "ეს კოდი ჯერ არ არის ბაზაში.",
-        notFoundText: "CarDoc-ის ბაზას ეტაპობრივად დაემატება ათასობით OBD-II კოდი.",
-        unknown: "უცნობი"
-      },
+function updateDbStatus(){
+  const status = document.getElementById("dbStatus");
+  status.classList.remove("error");
+  status.textContent = translations[languageSelect.value].dbLoaded(Object.keys(codeDatabase).length);
+}
 
-      ru: {
-        title: "Что не так с вашим автомобилем?",
-        subtitle: "Введите код OBD, и CarDoc объяснит возможную проблему.",
-        placeholder: "ПРИМЕР: P0301",
-        scan: "Поиск",
-        garageTitle: "Мои автомобили",
-        garageText: "Сохраните свои автомобили",
-        symptomsTitle: "Симптомы",
-        symptomsText: "Опишите проблему",
-        historyTitle: "История",
-        historyText: "Предыдущая диагностика",
-        maintenanceTitle: "Обслуживание",
-        maintenanceText: "Напоминания о сервисе",
-        emptyAlert: "Введите OBD-код",
-        notFoundTitle: "Код пока не найден.",
-        notFoundText: "База CarDoc будет дополнена тысячами кодов OBD-II.",
-        unknown: "Неизвестно"
-      }
-    };
+function applyLanguage(lang){
+  const t=translations[lang];
+  document.documentElement.lang=lang;
+  document.getElementById("title").innerText=t.title;
+  document.getElementById("subtitle").innerText=t.subtitle;
+  document.getElementById("codeInput").placeholder=t.placeholder;
+  document.getElementById("scanButton").innerText=t.scan;
+  document.getElementById("garageTitle").innerText=t.garageTitle;
+  document.getElementById("garageText").innerText=t.garageText;
+  document.getElementById("symptomsTitle").innerText=t.symptomsTitle;
+  document.getElementById("symptomsText").innerText=t.symptomsText;
+  document.getElementById("historyTitle").innerText=t.historyTitle;
+  document.getElementById("historyText").innerText=t.historyText;
+  document.getElementById("maintenanceTitle").innerText=t.maintenanceTitle;
+  document.getElementById("maintenanceText").innerText=t.maintenanceText;
+  localStorage.setItem("cardoc_language",lang);
+  if(Object.keys(codeDatabase).length) updateDbStatus();
+  if(document.getElementById("result").style.display==="block" && document.getElementById("codeInput").value.trim()) diagnose();
+}
 
-    const languageSelect = document.getElementById("language");
+function diagnose(){
+  const code=document.getElementById("codeInput").value.trim().toUpperCase();
+  const lang=languageSelect.value;
+  const t=translations[lang];
+  if(!code){alert(t.emptyAlert);return;}
 
-    function applyLanguage(lang) {
-      const t = translations[lang];
+  const result=document.getElementById("result");
+  const entry=codeDatabase[code];
+  document.getElementById("resultCode").innerText=code;
+  const causes=document.getElementById("causes");
+  causes.innerHTML="";
 
-      document.documentElement.lang = lang;
-      document.getElementById("title").innerText = t.title;
-      document.getElementById("subtitle").innerText = t.subtitle;
-      document.getElementById("codeInput").placeholder = t.placeholder;
-      document.getElementById("scanButton").innerText = t.scan;
-      document.getElementById("garageTitle").innerText = t.garageTitle;
-      document.getElementById("garageText").innerText = t.garageText;
-      document.getElementById("symptomsTitle").innerText = t.symptomsTitle;
-      document.getElementById("symptomsText").innerText = t.symptomsText;
-      document.getElementById("historyTitle").innerText = t.historyTitle;
-      document.getElementById("historyText").innerText = t.historyText;
-      document.getElementById("maintenanceTitle").innerText = t.maintenanceTitle;
-      document.getElementById("maintenanceText").innerText = t.maintenanceText;
-
-      localStorage.setItem("cardoc_language", lang);
-
-      const visibleResult = document.getElementById("result").style.display === "block";
-      if (visibleResult && document.getElementById("codeInput").value.trim()) {
-        diagnose();
-      }
-    }
-
-    function diagnose() {
-      const input = document.getElementById("codeInput").value.trim().toUpperCase();
-      const lang = languageSelect.value;
-      const t = translations[lang];
-      const result = document.getElementById("result");
-
-      if (!input) {
-        alert(t.emptyAlert);
-        return;
-      }
-
-      document.getElementById("resultCode").innerText = input;
-
-      if (codeData[input]) {
-        const data = codeData[input][lang];
-        document.getElementById("resultTitle").innerText = data.title;
-        document.getElementById("resultCause").innerText = data.cause;
-        document.getElementById("severity").innerText = data.severity;
-      } else {
-        document.getElementById("resultTitle").innerText = t.notFoundTitle;
-        document.getElementById("resultCause").innerText = t.notFoundText;
-        document.getElementById("severity").innerText = t.unknown;
-      }
-
-      result.style.display = "block";
-      result.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }
-
-    document.getElementById("codeInput").addEventListener("keydown", function(event) {
-      if (event.key === "Enter") {
-        diagnose();
-      }
+  if(entry){
+    const localized=entry[lang] || entry.en;
+    document.getElementById("resultTitle").innerText=localized.title;
+    document.getElementById("categoryLine").innerText=`${t.category}: ${entry.category}`;
+    (localized.causes || []).forEach(c=>{
+      const li=document.createElement("li");
+      li.textContent=c;
+      causes.appendChild(li);
     });
+    const sev=document.getElementById("severity");
+    sev.className="badge " + entry.severity;
+    sev.innerText=t.severities[entry.severity] || entry.severity;
+  }else{
+    document.getElementById("resultTitle").innerText=t.notFoundTitle;
+    document.getElementById("categoryLine").innerText="";
+    const sev=document.getElementById("severity");
+    sev.className="badge";
+    sev.innerText="";
+  }
+  result.style.display="block";
+  result.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
 
-    languageSelect.addEventListener("change", function() {
-      applyLanguage(this.value);
-    });
+document.getElementById("codeInput").addEventListener("keydown",e=>{if(e.key==="Enter")diagnose();});
+languageSelect.addEventListener("change",function(){applyLanguage(this.value);});
 
-    const savedLanguage = localStorage.getItem("cardoc_language") || "en";
-    languageSelect.value = savedLanguage;
-    applyLanguage(savedLanguage);
-  </script>
+const savedLanguage=localStorage.getItem("cardoc_language")||"en";
+languageSelect.value=savedLanguage;
+applyLanguage(savedLanguage);
+loadDatabase();
+</script>
 </body>
 </html>
